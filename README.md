@@ -14,7 +14,7 @@ For flexibility, namespace structure in C++  is used for different tasks. Two de
 Odyssey source code provide in the github includes the following files:
 <ul>
  <li>main.cpp</li>
- assign parameters such as (black hole spin, inclinaiton angle, and image size, observed frequency), then Call Task
+ assign parameters such as (black hole spin, inclinaiton angle, image size, observed frequency), then Call Task
  
  <li>task1.h</li>
  declare namespace for Task1
@@ -31,7 +31,7 @@ Odyssey source code provide in the github includes the following files:
  <li>Odyssey.cu</li>
  
  <li>Odyssey_def.h</li>
- define constants (such as black hole mass, distance to the black hole) and variables which will be saved in the GPU global memory during computation
+ define constants (such as black hole mass, distance to the black hole), and variables which will be saved in the GPU global memory during computation
  
  <li>Odyssey_def_fun.h</li>
  define functions needed for 
