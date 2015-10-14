@@ -37,8 +37,9 @@ Odyssey source code provide in the github includes the following files:
  define functions need for 
  <ol>
  <li>ray-tracing</li>
- initial condition, adaptive size Runge-Kutta method 
- <li>The image of Keplerian rotating shell at 340GHz</li>
+ such as initial condition, diffrential equaitons for geodesics, adaptive size Runge-Kutta method 
+ <li>radiative transfer</li>
+ such as table of Bessel function of the second kind (for computation of thermal synchoron emission), unit conversion to Jansky or liminosity
  </ol>
 
  
