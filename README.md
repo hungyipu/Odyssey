@@ -14,7 +14,7 @@ For flexibility, namespace structure in C++  is used for different tasks. Two de
 Odyssey source code provide in the github includes the following files:
 <ul>
  <li>main.cpp</li>
- Call Task
+ assign parameters such as (black hole spin, inclinaiton angle, and image size, observed frequency), then Call Task
  
  <li>task1.h</li>
  declare namespace for Task1
@@ -31,15 +31,15 @@ Odyssey source code provide in the github includes the following files:
  <li>Odyssey.cu</li>
  
  <li>Odyssey_def.h</li>
- define constants and variables 
+ define constants (such as black hole mass, distance to the black hole) and variables which will be saved in the GPU global memory during computation
  
  <li>Odyssey_def_fun.h</li>
- define functions need for 
+ define functions needed for 
  <ol>
  <li>ray-tracing</li>
  such as initial condition, diffrential equaitons for geodesics, adaptive size Runge-Kutta method 
  <li>radiative transfer</li>
- such as table of Bessel function of the second kind (for computation of thermal synchoron emission), unit conversion to Jansky or liminosity
+ such as table of Bessel function of the second kind (for computation of thermal synchoron emission), unit conversion to Jansky or Liminosity (erg/sec)
  </ol>
 
  
