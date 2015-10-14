@@ -12,7 +12,7 @@ For flexibility, namespace structure in C++  is used for different tasks. Two de
 
 ## Summary of Source Codes
 Odyssey source code provide in the github includes the following files:
-<ul>
+<ol>
  <li>main.cpp</li>
  assign parameters (black hole spin, inclinaiton angle, image size, observed frequency, CUDA configuration...), 
  <br />call Task, then save CUDA computed result to output file
@@ -43,14 +43,14 @@ Odyssey source code provide in the github includes the following files:
  
  <li>Odyssey_def_fun.h</li>
  define functions needed for
- <ol>
+ <ul>
  <li>ray-tracing</li>
  such as initial condition, diffrential equaitons for geodesics, adaptive size Runge-Kutta method 
  <li>radiative transfer</li>
  such as table of Bessel function of the second kind (for computation of thermal synchoron emission), unit conversion to Jansky or Liminosity (erg/sec)
- </ol>
+ </ul>
 
-</ul>
+</ol>
 <br />
 Odyssey is a fast, accurate, and flexible code. Users can simply modifying the existing Tasks in Odyssey.cu by assigning different return value to main.cpp.
 
