@@ -7,8 +7,16 @@ For flexibility, namespace structure in C++  is used for different tasks. Two de
  <li>The image of Keplerian rotating shell at 340GHz</li>
  </ol>
  The computed result is shown in the [Wiki](https://github.com/hungyipu/Odyssey/wiki) 
+ 
+## Reference
+"Odyssey: A PUBLIC GPU-BASED CODE FOR GENERAL-RELATIVISTIC RADIATIVE TRANSFER IN KERR
+SPACE-TIME"
+
+## Source codes
+Odyssey source code provide in the github includes the following files:
 
 
-## source codes
+
+
 
 ## Pseudo code
