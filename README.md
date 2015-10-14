@@ -48,7 +48,6 @@ Odyssey source code provide in the github includes the following files:
  <li>radiative transfer</li>
  such as table of Bessel function of the second kind (for computation of thermal synchoron emission), unit conversion to Jansky or Liminosity (erg/sec)
  </ul>
-
 </ol>
 <br />
 Odyssey is a fast, accurate, and flexible code. Users can simply modifying the existing Tasks in Odyssey.cu by assigning different return value to main.cpp.
@@ -59,7 +58,7 @@ Odyssey is a fast, accurate, and flexible code. Users can simply modifying the e
  <li>add file: task3.cpp</li>
  <li>add subroutine: task3() in main.cpp
  <li>describe job content in Odyssey.cu
- </ol>
+</ol>
 
 
 
