@@ -37,7 +37,8 @@ Odyssey source code provide in the github includes the following files:
  <br />
  
  <li>Odyssey_def.h</li>
- define constants (such as black hole mass, distance to the black hole), and variables which will be saved in the GPU global memory during computation
+ define constants (such as black hole mass, distance to the black hole),   
+ and variables which will be saved in the GPU global memory during computation
  <br />
  
  <li>Odyssey_def_fun.h</li>
