@@ -6,16 +6,23 @@ For flexibility, namespace structure in C++  is used for different tasks. Two de
  <li>The red-shift of the Keplerian disk</li>
  <li>The image of Keplerian rotating shell at 340GHz</li>
  </ol>
- The computed result is shown in the [Wiki](https://github.com/hungyipu/Odyssey/wiki) 
+ The computed result is shown in the [Wiki](https://github.com/hungyipu/Odyssey/wiki). 
  
 
 
 ## Summary of source codes
 Odyssey source code provide in the github includes the following files:
 <ul>
- <li>The red-shift of the Keplerian disk</li>
- <li>The image of Keplerian rotating shell at 340GHz</li>
+ <li>main.cpp</li>:dfasdfd
+ <li>task1.cpp</li>
+ <li>task1.h</li>
+ <li>task2.cpp</li>
+ <li>task2.h</li>
+ <li>Odyssey.cu</li>
+ <li>Odyssey_def.h</li>
+ <li>Odyssey_def_fun.h</li>
 </ul>
+
 
 
 
