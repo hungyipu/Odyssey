@@ -14,7 +14,7 @@ For flexibility, namespace structure in C++  is used for different tasks. Two de
 Odyssey source code provide in the github includes the following files:
 <ul>
  <li>main.cpp</li>
- assign parameters such as (black hole spin, inclinaiton angle, image size, observed frequency, CUDA configuration...), 
+ assign parameters (black hole spin, inclinaiton angle, image size, observed frequency, CUDA configuration...), 
  <br />then Call Task  
  
  <li>task1.h</li>
