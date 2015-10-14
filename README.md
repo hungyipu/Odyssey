@@ -19,26 +19,26 @@ Odyssey source code provide in the github includes the following files:
  
  <li>task1.h</li>
  declare namespace for Task1
- <br />
+ 
  
  <li>task1.cpp</li>
  define function for Task1
- <br />
+
  
  <li>task2.h</li>
  declare namespace for Task2
- <br />
+
  
  <li>task2.cpp</li>
  define function for Task2
- <br />
+
  
  <li>Odyssey.cu</li>
- <br />
+
  
  <li>Odyssey_def.h</li>
  define constants (such as black hole mass, distance to the black hole),   
- and variables which will be saved in the GPU global memory during computation
+ <br />and variables which will be saved in the GPU global memory during computation
  <br />
  
  <li>Odyssey_def_fun.h</li>
