@@ -49,7 +49,6 @@ Odyssey source code provide in the github includes the following files:
  such as table of Bessel function of the second kind (for computation of thermal synchoron emission), unit conversion to Jansky or Liminosity (erg/sec)
  </ul>
 </ol>
-<br />
 Odyssey is a fast, accurate, and flexible code. Users can simply modifying the existing Tasks in Odyssey.cu by assigning different return value to main.cpp.
 
 <br />To add a new Task (e.g., task 3), users can simply take Task1 and Task2 as example then
