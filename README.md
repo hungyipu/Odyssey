@@ -13,11 +13,15 @@ For flexibility, namespace structure in C++  is used for different tasks. Two de
 ## Summary of source codes
 Odyssey source code provide in the github includes the following files:
 <ul>
- <li>main.cpp</li>:dfasdfd
+ <li>main.cpp</li>
+  <li>task1.h</li>
+ declare namespace for Task1
  <li>task1.cpp</li>
- <li>task1.h</li>
+ define function for Task1
+  <li>task2.h</li>
+ declare namespace for Task2
  <li>task2.cpp</li>
- <li>task2.h</li>
+ define function for Task2
  <li>Odyssey.cu</li>
  <li>Odyssey_def.h</li>
  <li>Odyssey_def_fun.h</li>
