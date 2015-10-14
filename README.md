@@ -6,7 +6,7 @@ For flexibility, namespace structure in C++  is used for different tasks. Two de
  <li>The red-shift of the Keplerian disk</li>
  <li>The image of Keplerian rotating shell at 340GHz</li>
  </ol>
- The computed result is shown in the [Wiki!](https://github.com/hungyipu/Odyssey/wiki) 
+ The computed result is shown in the [Wiki](https://github.com/hungyipu/Odyssey/wiki) 
 
 
 
