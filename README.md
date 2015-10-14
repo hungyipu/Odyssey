@@ -9,7 +9,6 @@ For flexibility, namespace structure in C++  is used for different tasks. Two de
  The computed result is shown in the [Wiki](https://github.com/hungyipu/Odyssey/wiki). 
  
 
-
 ## Summary of Source Codes
 Odyssey source code provide in the github includes the following files:
 <ol>
