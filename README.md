@@ -39,7 +39,7 @@ Odyssey source code provide in the github includes the following files:
  <li>Odyssey_def.h</li>
  define constants (such as black hole mass, distance to the black hole),   
  <br />and variables which will be saved in the GPU global memory during computation
- <br />
+ 
  
  <li>Odyssey_def_fun.h</li>
  define functions needed for
@@ -51,9 +51,10 @@ Odyssey source code provide in the github includes the following files:
  </ol>
 
 </ul>
-
+<br />
 Odyssey is a fast, accurate, and flexible code. Users can simply modifying the existing Tasks in Odyssey.cu by assigning different return value to main.cpp.
-To add a new Task (e.g., task 3), users can simply take Task1 and Task2 as example then
+
+<br />To add a new Task (e.g., task 3), users can simply take Task1 and Task2 as example then
 <ol>
  <li>add file: task3.h</li>
  <li>add file: task3.cpp</li>
