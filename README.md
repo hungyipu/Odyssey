@@ -15,14 +15,14 @@ Odyssey source code provide in the github includes the following files:
 <ul>
  <li>main.cpp</li>
  assign parameters (black hole spin, inclinaiton angle, image size, observed frequency, CUDA configuration...), 
- <br />then Call Task  
+ <br />, call Task, then save CUDA computed result to output file
  
  <li>task1.h</li>
  declare namespace for Task1
  
  
  <li>task1.cpp</li>
- define function for Task1
+ define functions for setting up CUDA computation for Task1, such as allocate memory, copy memory between Host and Deevice, run CUDA computation, free memory
 
  
  <li>task2.h</li>
@@ -30,11 +30,11 @@ Odyssey source code provide in the github includes the following files:
 
  
  <li>task2.cpp</li>
- define function for Task2
+  define functions for setting up CUDA computation for Task2, such as allocate memory, copy memory between Host and Deevice, run CUDA computation, free memory
 
  
  <li>Odyssey.cu</li>
-
+ describe jobs of specific Task. Computation result will retun to main.cpp.
  
  <li>Odyssey_def.h</li>
  define constants (such as black hole mass, distance to the black hole),   
@@ -50,10 +50,16 @@ Odyssey source code provide in the github includes the following files:
  such as table of Bessel function of the second kind (for computation of thermal synchoron emission), unit conversion to Jansky or Liminosity (erg/sec)
  </ol>
 
- 
 </ul>
 
-
+Odyssey is a fast, accurate, and flexible code. To add a new Task (e.g., task 3), users can 
+<ol>
+ <li>add task3.h</li>
+ <li>add task3.cpp</li>
+ <li>add void task3() in main.cpp
+ <li>add job content in Odyssey.cu
+ </ol>
+or, users can simply modifying the existing Tasks in Odyssey.cu by assigning different return value to main.cpp.
 
 
 ## Code Structure
