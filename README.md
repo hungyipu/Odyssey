@@ -52,14 +52,15 @@ Odyssey source code provide in the github includes the following files:
 
 </ul>
 
-Odyssey is a fast, accurate, and flexible code. To add a new Task (e.g., task 3), users can simply take Task1 and Task2 as example then
+Odyssey is a fast, accurate, and flexible code. Users can simply modifying the existing Tasks in Odyssey.cu by assigning different return value to main.cpp.
+To add a new Task (e.g., task 3), users can simply take Task1 and Task2 as example then
 <ol>
  <li>add file: task3.h</li>
  <li>add file: task3.cpp</li>
  <li>add subroutine: task3() in main.cpp
- <li>add job content in Odyssey.cu
+ <li>describe job content in Odyssey.cu
  </ol>
-or, users can simply modifying the existing Tasks in Odyssey.cu by assigning different return value to main.cpp.
+
 
 
 ## Code Structure
