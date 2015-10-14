@@ -14,17 +14,34 @@ For flexibility, namespace structure in C++  is used for different tasks. Two de
 Odyssey source code provide in the github includes the following files:
 <ul>
  <li>main.cpp</li>
-  <li>task1.h</li>
+ Call Task
+ 
+ <li>task1.h</li>
  declare namespace for Task1
+ 
  <li>task1.cpp</li>
  define function for Task1
-  <li>task2.h</li>
+ 
+ <li>task2.h</li>
  declare namespace for Task2
+ 
  <li>task2.cpp</li>
  define function for Task2
+ 
  <li>Odyssey.cu</li>
+ 
  <li>Odyssey_def.h</li>
+ define constants and variables 
+ 
  <li>Odyssey_def_fun.h</li>
+ define functions need for 
+ <ol>
+ <li>ray-tracing</li>
+ initial condition, adaptive size Runge-Kutta method 
+ <li>The image of Keplerian rotating shell at 340GHz</li>
+ </ol>
+
+ 
 </ul>
 
 
