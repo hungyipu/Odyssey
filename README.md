@@ -10,14 +10,17 @@ For flexibility, namespace structure in C++  is used for different tasks. Two de
  
 
 
-## Source codes
+## Summary of source codes
 Odyssey source code provide in the github includes the following files:
+<ul>
+ <li>The red-shift of the Keplerian disk</li>
+ <li>The image of Keplerian rotating shell at 340GHz</li>
+</ul>
 
 
 
-
-
-## Pseudo code
+## Code Structure
+The pseudo code of Odyssey is provided below.
 
 
 ## Reference
