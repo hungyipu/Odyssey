@@ -84,7 +84,7 @@ job-details:
 <br />
 Odyssey is fast, accurate, and flexible. User can easiliy assign a different job by simply modifying the job-details. 
 <br />
-<br />Alternatively, to add a new Task (e.g., task 3), following recipe can be useful:
+<br />Alternatively, User can also add a new Task (e.g., task 3) by following suggested recipe:
  1. add file: task3.h</li>
  2. add file: task3.cpp</li>
  3. add subroutine: task3() in **main.cpp**
