@@ -11,7 +11,7 @@ For flexibility, namespace structure in C++  is used for different tasks. Two de
  Reference-style: 
 ![alt text][logo]
 
-[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
+[logo]: http://www.asiaa.sinica.edu.tw/~hypu/work.png "Logo Title Text 2"
 
 *This text will be italic*
 **This text will be bold**
