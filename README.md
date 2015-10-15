@@ -29,7 +29,7 @@ defines functions for setting up CUDA computation for Task2<br />
 
  
 **Odyssey.cu**
- describes jobs of specific Task, such as `__global__ GPU_task1work()`, `__global__ GPU_task1work()`. Computation result will retun to **main.cpp**.<br />
+ describes jobs of specific Task, such as `__global__ GPU_task1work()`, `__global__ GPU_task1work()`. Computation result will retun to **main.cpp**<br />
  
 **Odyssey_def.h**
  defines constants (such as black hole mass, distance to the black hole),   
