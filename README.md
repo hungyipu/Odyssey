@@ -80,7 +80,8 @@ job-details:
 |---Loop End: if the ray enter the black hole or outside the region of interest<br />
 
 <br />
-Odyssey is fast, accurate, and flexible. New user-defined task can be assigned by simply modifying the job detail indicated inside the above *job-details region*.
+Odyssey is fast, accurate, and flexible. New user-defined task can be assigned by simply modifying the job-details. 
+
 <br />
 <br />Alternatively, to add a new Task (e.g., task 3), following recipe can be useful:
  1. add file: task3.h</li>
