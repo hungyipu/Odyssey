@@ -71,19 +71,16 @@ By calling `GPUcompute()`, the parallel computation job detial is finally assign
 `__global__ GPU_task1work()`:<br />
 |---setup initial condition `initial()` <br />
 |<br />
-|---Loop start: <br />
+|---Loop Start: <br />
 |---update the ray backward in time by adaptive size, Runge-Kutta method `rk5()`<br />
 ```
-inside Loop:
-  if the ray is inside region of interest: 
-    do assignd job
-    e.x.
-  if the phton is outside region of interest: 
-   quit
+job-assignedment:
+   ex. when the ray hit the disk, compute the redshift
 ```
-|--- Loop end<br />
+|---Loop End: if the ray enter the black hole or outside the region of interest<br />
+
 <br />
-Odyssey is fast, accurate, and flexible. New user-defined task can be assigned by simply modifying the job detail indicated inside the Loop region.
+Odyssey is fast, accurate, and flexible. New user-defined task can be assigned by simply modifying the job detail indicated inside the job-assignment region.
 <br />
 <br />Alternatively, to add a new Task (e.g., task 3), following recipe can be useful:
  1. add file: task3.h</li>
