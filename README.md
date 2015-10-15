@@ -89,9 +89,20 @@ In **main.cpp**, `task1()` is called by `main()`, then go through<br />
 |<br />
 |---save result<br />
 
-In **Odyssey.cu**, `__global__ GPU_task1work()` is invoked by `GPUcompute()`<br />
+By calling `GPUcompute()`, the parallel computation job detial of the  is finally assigned to  `__global__ GPU_task1work()` in **Odyssey.cu**<br />
 <br />
 `__global__ GPU_task1work()`:<br />
+|---assign parameters <br />
+|<br />
+|---set CUDA configuration `setDims()`<br />
+|<br />
+|---allocate memory on device for input and output `PRE()`<br />
+|<br />
+|---perform the *for loop* for performing GRRT `GPUcompute()`<br />
+|<br />
+|---copy memory form device to host and free CUDA memory `by AFTER()`<br />
+|<br />
+|---save result<br />
 <br />
 Odyssey is a fast, accurate, and flexible code. Users can simply modifying the existing Tasks in **Odyssey.cu** by assigning different return value to **main.cpp**.
 <br />To add a new Task (e.g., task 3), users can simply take Task1 and Task2 as example then
