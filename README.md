@@ -8,6 +8,14 @@ For flexibility, namespace structure in C++  is used for different tasks. Two de
  </ol>
  The computed result is shown in the [wiki](https://github.com/hungyipu/Odyssey/wiki) . 
  
+ Check out this neat program I wrote:
+
+```
+x = 0
+x = 2 + 2
+what is x
+```
+
 | Left-Aligned  | Center Aligned  | Right Aligned |
 | :------------ |:---------------:| -----:|
 | col 3 is      | some wordy text | $1600 |
