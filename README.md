@@ -80,7 +80,7 @@ main() in main.cpp
   calltask1() in main.cpp
     assign parameters 
  |
-   |-set CUDA configuration (by setDims() defined )
+   |-set CUDA configuration 'by setDims() defined'
    |
   |-allocate memory on device for input and output (by PRE() defined)
   |
