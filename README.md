@@ -89,11 +89,11 @@ In main.cpp, `task1()` is called by `main()`, then go through<br />
 |<br />
 |---set CUDA configuration `setDims()`<br />
 |<br />
-|---allocate memory on device for input and output `by PRE()` *defined*<br />
+|---allocate memory on device for input and output `PRE()`<br />
 |<br />
-|---perform the loop for performing GRRT<br />
+|---perform the loop for performing GRRT `GPUcompute()`<br />
 
-|---copy memory form device to host and free CUDA memory `by AFTER()` *defined**<br />
+|---copy memory form device to host and free CUDA memory `by AFTER()`<br />
 |<br />
 |---save result<br />
 
