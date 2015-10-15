@@ -72,12 +72,13 @@ By calling `GPUcompute()`, the parallel computation job detial is finally assign
 |---setup initial condition `initial()` <br />
 |<br />
 |================Loop Start=====================<br />
-|---update the ray backward in time by adaptive size, Runge-Kutta method `rk5()`<br />
+|--- update the ray backward in time by adaptive size, Runge-Kutta method `rk5()`<br />
 ```
 job-details:
-   ex. when the ray hit the disk, compute the redshift
+   ex. task1: when the ray hit the disk, compute the redshift
+       task2: when inside a Keplerian rotating shell, pereform GRRT calculation
 ```
-|---exit if the ray enter the black hole or outside the region of interest<br />
+|--- exit if the ray enter the black hole or outside the region of interest, otherwise, contine next update<br />
 |================Loop End=====================<br />
 
 <br />
