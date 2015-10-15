@@ -69,17 +69,15 @@ In **main.cpp**, `task1()` is called by `main()`, then go through<br />
 By calling `GPUcompute()`, the parallel computation job detial is finally assigned to  `__global__ GPU_task1work()` in **Odyssey.cu**, thern go through <br />
 <br />
 `__global__ GPU_task1work()`:<br />
-|---assign parameters <br />
+|---setup initial condition `initial()` <br />
 |<br />
-|---set CUDA configuration `setDims()`<br />
+|---Loop start:
+|-------------integrate the ray backward in time by adaptive size, Runge-Kutta method `rk5()`<br />
 |<br />
-|---allocate memory on device for input and output `PRE()`<br />
+|-------------if the ray is inside region of interest `GPUcompute()`<br />
+|
 |<br />
-|---perform the *for loop* for performing GRRT `GPUcompute()`<br />
-|<br />
-|---copy memory form device to host and free CUDA memory `by AFTER()`<br />
-|<br />
-|---save result<br />
+|-------------if the phton is outside region of interest: quit<br />
 <br />
 Odyssey is fast, accurate, and flexible. Users can simply modifying the existing Tasks in **Odyssey.cu** by assigning different return value to **main.cpp**.
 <br />
