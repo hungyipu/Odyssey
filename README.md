@@ -47,11 +47,11 @@ defines functions for setting up CUDA computation for Task1, such as allocate me
 
  
 **task2.cpp**
-defines functions for setting up CUDA computation for Task2, such as allocate memory, copy memory between Host and Deevice, run CUDA computation, free memory<br />
+defines functions for setting up CUDA computation for Task2<br />
 
  
 **Odyssey.cu**
- describes jobs of specific Task. Computation result will retun to main.cpp.<br />
+ describes jobs of specific Task. Computation result will retun to **main.cpp**.<br />
  
 **Odyssey_def.h**
  defines constants (such as black hole mass, distance to the black hole),   
@@ -82,9 +82,11 @@ In **main.cpp**, `task1()` is called by `main()`, then go through<br />
 |<br />
 |---perform the *for loop* for performing GRRT `GPUcompute()`<br />
 |<br />
-|---copy memory form device to host and free CUDA memory `by AFTER()`<br />
+|---copy memory form device to host and free CUDA memory `AFTER()`<br />
 |<br />
 |---save result<br />
+
+
 ## Code Structure: more details
 By calling `GPUcompute()`, the parallel computation job detial is finally assigned to  `__global__ GPU_task1work()` in **Odyssey.cu**, thern go through <br />
 <br />
