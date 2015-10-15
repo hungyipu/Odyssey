@@ -78,7 +78,7 @@ job-details:
    ex. when the ray hit the disk, compute the redshift
        (you can define a different job here)
 ```
-|--- exit if the ray enter the black hole or outside the region of interest, otherwise, contine next update<br />
+|--- exit if the ray enter the black hole or outside the region of interest, otherwise, contine the Loop<br />
 |================Loop End=====================<br />
 
 <br />
