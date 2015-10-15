@@ -74,19 +74,19 @@ By calling `GPUcompute()`, the parallel computation job detial is finally assign
 |---Loop Start: <br />
 |---update the ray backward in time by adaptive size, Runge-Kutta method `rk5()`<br />
 ```
-job-assignedment:
+job-details:
    ex. when the ray hit the disk, compute the redshift
 ```
 |---Loop End: if the ray enter the black hole or outside the region of interest<br />
 
 <br />
-Odyssey is fast, accurate, and flexible. New user-defined task can be assigned by simply modifying the job detail indicated inside the job-assignment region.
+Odyssey is fast, accurate, and flexible. New user-defined task can be assigned by simply modifying the job detail indicated inside the above *job-details region*.
 <br />
 <br />Alternatively, to add a new Task (e.g., task 3), following recipe can be useful:
  1. add file: task3.h</li>
  2. add file: task3.cpp</li>
  3. add subroutine: task3() in **main.cpp**
- 4. describe job details in **Odyssey.cu**
+ 4. describe job-details in **Odyssey.cu**
  
 ## Reference
 "Odyssey: A PUBLIC GPU-BASED CODE FOR GENERAL-RELATIVISTIC RADIATIVE TRANSFER IN KERR
