@@ -37,29 +37,29 @@ Odyssey source code prvided in the src folder includes the following files:<br /
 assign parameters (black hole spin, inclinaiton angle, image size, observed frequency, CUDA configuration...), call Task, then save CUDA computed result to output file<br />
 
 **task1.h**
-declare namespace for Task1<br />
+declares namespace for Task1<br />
  
  **task1.cpp**
-define functions for setting up CUDA computation for Task1, such as allocate memory, copy memory between Host and Deevice, run CUDA computation, free memory<br />
+defines functions for setting up CUDA computation for Task1, such as allocate memory, copy memory between Host and Deevice, run CUDA computation, free memory<br />
 
 **task2.h**
- declare namespace for Task2
+ declares namespace for Task2
 
  
-**task2.cpp**<br />
-define functions for setting up CUDA computation for Task2, such as allocate memory, copy memory between Host and Deevice, run CUDA computation, free memory<br />
+**task2.cpp**
+defines functions for setting up CUDA computation for Task2, such as allocate memory, copy memory between Host and Deevice, run CUDA computation, free memory<br />
 
  
-**Odyssey.cu**<br />
- describe jobs of specific Task. Computation result will retun to main.cpp.<br />
+**Odyssey.cu**
+ describes jobs of specific Task. Computation result will retun to main.cpp.<br />
  
-**Odyssey_def.h**<br />
- define constants (such as black hole mass, distance to the black hole),   
+**Odyssey_def.h**
+ defines constants (such as black hole mass, distance to the black hole),   
  and variables which will be saved in the GPU global memory during computation<br />
  
  
-**Odyssey_def_fun.h**<br />
- define functions needed for:
+**Odyssey_def_fun.h**
+ defines functions needed for:
  <ul>
  <li>ray-tracing</li>
  such as initial condition, diffrential equaitons for geodesics, adaptive size Runge-Kutta method 
