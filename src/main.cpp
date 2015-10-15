@@ -62,7 +62,7 @@ namespace OdysseyTasks
 
 
 		mission.PRE(VariablesIn);
-		 
+		  
 
 		//compute number of grides, to cover the whole image plane; eqn (?)
 		ImaDimX = (int)ceil((double)SIZE / (BlockDimX * GridDimX));
