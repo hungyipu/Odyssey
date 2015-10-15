@@ -35,7 +35,7 @@ Odyssey source code prvided in the src folder includes the following files:<br /
 **main.cpp**<br />
 assign parameters (black hole spin, inclinaiton angle, image size, observed frequency, CUDA configuration...), call Task, then save CUDA computed result to output file<br />
 
-task1.h**<br />
+**task1.h**<br />
 declare namespace for Task1<br />
  
  **task1.cpp**<br />
@@ -52,7 +52,7 @@ define functions for setting up CUDA computation for Task2, such as allocate mem
 **Odyssey.cu**<br />
  describe jobs of specific Task. Computation result will retun to main.cpp.<br />
  
-**Odyssey_def.h<br />
+**Odyssey_def.h**<br />
  define constants (such as black hole mass, distance to the black hole),   
  <br />and variables which will be saved in the GPU global memory during computation<br />
  
@@ -60,48 +60,11 @@ define functions for setting up CUDA computation for Task2, such as allocate mem
 **Odyssey_def_fun.h**<br />
  define functions needed for
  <ul>
- <li>ray-tracing</li>
+ **ray-tracing**
  such as initial condition, diffrential equaitons for geodesics, adaptive size Runge-Kutta method 
  <li>radiative transfer</li>
  such as table of Bessel function of the second kind (for computation of thermal synchoron emission), unit conversion to Jansky or Liminosity (erg/sec)
  </ul>
-
- 1. **main.cpp**<br />
- assign parameters (black hole spin, inclinaiton angle, image size, observed frequency, CUDA configuration...), call Task, then save CUDA computed result to output file
- 
- <li>**task1.h**</li>
- declare namespace for Task1
- 
- 
- <li>**task1.cpp**</li>
- define functions for setting up CUDA computation for Task1, such as allocate memory, copy memory between Host and Deevice, run CUDA computation, free memory
-
- 
- <li>**task2.h**</li>
- declare namespace for Task2
-
- 
- <li>task2.cpp</li>
-  define functions for setting up CUDA computation for Task2, such as allocate memory, copy memory between Host and Deevice, run CUDA computation, free memory
-
- 
- <li>Odyssey.cu</li>
- describe jobs of specific Task. Computation result will retun to main.cpp.
- 
- <li>Odyssey_def.h</li>
- define constants (such as black hole mass, distance to the black hole),   
- <br />and variables which will be saved in the GPU global memory during computation
- 
- 
- <li>Odyssey_def_fun.h</li>
- define functions needed for
- <ul>
- <li>ray-tracing</li>
- such as initial condition, diffrential equaitons for geodesics, adaptive size Runge-Kutta method 
- <li>radiative transfer</li>
- such as table of Bessel function of the second kind (for computation of thermal synchoron emission), unit conversion to Jansky or Liminosity (erg/sec)
- </ul>
-</ol>
 
 
 ## Code Structure
