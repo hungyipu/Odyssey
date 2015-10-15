@@ -72,12 +72,10 @@ Odyssey source code prvided in the src folder includes the following files:
 Odyssey is a fast, accurate, and flexible code. Users can simply modifying the existing Tasks in Odyssey.cu by assigning different return value to main.cpp.
 
 <br />To add a new Task (e.g., task 3), users can simply take Task1 and Task2 as example then
-<ol>
- <li>add file: task3.h</li>
- <li>add file: task3.cpp</li>
- <li>add subroutine: task3() in main.cpp
- <li>describe job content in Odyssey.cu
-</ol>
+ 1. add file: task3.h</li>
+ 2. add file: task3.cpp</li>
+ 3. add subroutine: task3() in main.cpp
+ 4. describe job content in Odyssey.cu
 
 
 
