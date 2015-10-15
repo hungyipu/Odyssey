@@ -81,11 +81,11 @@ Odyssey is a fast, accurate, and flexible code. Users can simply modifying the e
 ## Code Structure
 The pseudo code of Odyssey is provided below.
 
-main() `in main.cpp` <br />
- |- task1() `in main.cpp` <br />
- ||-assign parameters <br />
- ||<br />
- | | --set CUDA configuration `by setDims() defined`<br />
+|main() `in main.cpp` <br />
+|  |--- task1() `in main.cpp` <br />
+|    |---assign parameters <br />
+|    |<br />
+|    |---set CUDA configuration `by setDims() defined`<br />
     |
     | --allocate memory on device for input and output *by PRE() defined*
     |
