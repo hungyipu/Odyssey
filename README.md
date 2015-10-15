@@ -88,7 +88,7 @@ Odyssey is fast, accurate, and flexible. User can easiliy assign a different job
  1. add file: task3.h</li>
  2. add file: task3.cpp</li>
  3. add subroutine: task3() in **main.cpp**
- 4. describe job-details in **Odyssey.cu**
+ 4. add related subroutines and describe job-details in **Odyssey.cu**
  
 ## Reference
 "Odyssey: A PUBLIC GPU-BASED CODE FOR GENERAL-RELATIVISTIC RADIATIVE TRANSFER IN KERR
