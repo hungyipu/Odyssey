@@ -75,7 +75,7 @@ Odyssey is a fast, accurate, and flexible code. Users can simply modifying the e
 
 ## Code Structure
 The pseudo code of Odyssey is provided below.
-
+```
 main() in main.cpp
 <br />  calltask1() in main.cpp
 <br />    assign parameters 
@@ -89,7 +89,7 @@ main() in main.cpp
 <br />|-copy memory form device to host and free CUDA memory `by AFTER() defined `
 <br />|
 <br />|-save result
-
+```
 ## Reference
 "Odyssey: A PUBLIC GPU-BASED CODE FOR GENERAL-RELATIVISTIC RADIATIVE TRANSFER IN KERR
 SPACE-TIME"
