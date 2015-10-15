@@ -40,7 +40,7 @@ defines functions for setting up CUDA computation for Task2<br />
  defines functions needed for:
  <ul>
  <li>Ray-Tracing</li>
- such as initial condition, diffrential `initial()` equaitons for geodesics, adaptive size Runge-Kutta method `rk5()`
+ such as initial condition  `initial()` , diffrential equaitons for geodesics, adaptive size Runge-Kutta method `rk5()`
  <li>Radiative Transfer</li>
  such as table of Bessel function of the second kind (for computation of thermal synchoron emission), unit conversion to Jansky or Liminosity (erg/sec)
  </ul>
