@@ -18,7 +18,7 @@ assign parameters (black hole spin, inclinaiton angle, image size, observed freq
 declares namespace for Task1<br />
  
  **task1.cpp**
-defines functions for setting up CUDA computation for Task1, such as allocate memory, copy memory between Host and Deevice, run CUDA computation, free memory<br />
+defines functions for setting up CUDA computation for Task1, including `setDims()`, `PRE()`, `GPUcompute()`, and `AFTER()`<br />
 
 **task2.h**
  declares namespace for Task2
@@ -29,7 +29,7 @@ defines functions for setting up CUDA computation for Task2<br />
 
  
 **Odyssey.cu**
- describes jobs of specific Task. Computation result will retun to **main.cpp**.<br />
+ describes jobs of specific Task, such as `__global__ GPU_task1work()`, `__global__ GPU_task1work()`. Computation result will retun to **main.cpp**.<br />
  
 **Odyssey_def.h**
  defines constants (such as black hole mass, distance to the black hole),   
@@ -40,7 +40,7 @@ defines functions for setting up CUDA computation for Task2<br />
  defines functions needed for:
  <ul>
  <li>Ray-Tracing</li>
- such as initial condition, diffrential equaitons for geodesics, adaptive size Runge-Kutta method 
+ such as initial condition, diffrential `initial()` equaitons for geodesics, adaptive size Runge-Kutta method `rk5()`
  <li>Radiative Transfer</li>
  such as table of Bessel function of the second kind (for computation of thermal synchoron emission), unit conversion to Jansky or Liminosity (erg/sec)
  </ul>
@@ -81,7 +81,6 @@ job-details:
 
 <br />
 Odyssey is fast, accurate, and flexible. New user-defined task can be assigned by simply modifying the job-details. 
-
 <br />
 <br />Alternatively, to add a new Task (e.g., task 3), following recipe can be useful:
  1. add file: task3.h</li>
