@@ -80,7 +80,7 @@ In **main.cpp**, `task1()` is called by `main()`, then go through<br />
 |<br />
 |---allocate memory on device for input and output `PRE()`<br />
 |<br />
-|---perform the *for loop* for performing GRRT `GPUcompute()`<br />
+|---perform the [*for loop* for performing GRRT](http://www.asiaa.sinica.edu.tw/~hypu/work.png) `GPUcompute()`<br />
 |<br />
 |---copy memory form device to host and free CUDA memory `AFTER()`<br />
 |<br />
