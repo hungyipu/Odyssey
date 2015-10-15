@@ -8,6 +8,11 @@ For flexibility, namespace structure in C++  is used for different tasks. Two de
  </ol>
  The computed result is shown in the [wiki](https://github.com/hungyipu/Odyssey/wiki) . 
  
+ Reference-style: 
+![alt text][logo]
+
+[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
+
 *This text will be italic*
 **This text will be bold**
 Here's an idea: why don't we take `SuperiorProject` and turn it into `**Reasonable**Project`
