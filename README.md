@@ -33,7 +33,7 @@ puts markdown.to_html
 ## Summary of Source Codes
 Odyssey source code prvided in the src folder includes the following files:
 <ol>
- <li>**main.cpp**</li>
+ 1. **main.cpp**
  assign parameters (black hole spin, inclinaiton angle, image size, observed frequency, CUDA configuration...), call Task, then save CUDA computed result to output file
  
  <li>**task1.h**</li>
