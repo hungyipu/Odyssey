@@ -71,13 +71,14 @@ By calling `GPUcompute()`, the parallel computation job detial is finally assign
 `__global__ GPU_task1work()`:<br />
 |---setup initial condition `initial()` <br />
 |<br />
-|---Loop Start: <br />
+|================Loop Start=====================<br />
 |---update the ray backward in time by adaptive size, Runge-Kutta method `rk5()`<br />
 ```
 job-details:
    ex. when the ray hit the disk, compute the redshift
 ```
-|---Loop End: if the ray enter the black hole or outside the region of interest<br />
+|---exit if the ray enter the black hole or outside the region of interest<br />
+|================Loop End=====================<br />
 
 <br />
 Odyssey is fast, accurate, and flexible. New user-defined task can be assigned by simply modifying the job-details. 
