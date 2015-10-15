@@ -80,7 +80,7 @@ Odyssey is a fast, accurate, and flexible code. Users can simply modifying the e
 
 ## Code Structure
 The pseudo code of Odyssey is provided below.
-```
+```ruby
 main() *in main.cpp*
  | -- task1() *in main.cpp*
     | --assign parameters 
