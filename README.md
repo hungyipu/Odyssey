@@ -76,19 +76,19 @@ Odyssey is a fast, accurate, and flexible code. Users can simply modifying the e
 ## Code Structure
 The pseudo code of Odyssey is provided below.
 ```
-main() in main.cpp
- | task1() in main.cpp
-    | assign parameters 
+main() `in main.cpp`
+ | -- task1() `in main.cpp`
+    | --assign parameters 
     |
-    |-set CUDA configuration `by setDims() defined`
+    | --set CUDA configuration `by setDims() defined`
     |
-    |-allocate memory on device for input and output `by PRE() defined`
+    | --allocate memory on device for input and output `by PRE() defined`
     |
-    |-perform the loop for performing GRRT
+    | --perform the loop for performing GRRT
 
-    |-copy memory form device to host and free CUDA memory `by AFTER() defined `
+    | --copy memory form device to host and free CUDA memory `by AFTER() defined `
     |
-    |-save result
+    | --save result
 ```
 ## Reference
 "Odyssey: A PUBLIC GPU-BASED CODE FOR GENERAL-RELATIVISTIC RADIATIVE TRANSFER IN KERR
