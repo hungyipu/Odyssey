@@ -76,7 +76,6 @@ By calling `GPUcompute()`, the parallel computation job detial is finally assign
 ```
 job-details:
    ex. task1: when the ray hit the disk, compute the redshift
-      
 ```
 |--- exit if the ray enter the black hole or outside the region of interest, otherwise, contine next update<br />
 |================Loop End=====================<br />
