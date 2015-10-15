@@ -31,11 +31,12 @@ puts markdown.to_html
 | col 2 is      | centered        |   $12 |
 | zebra stripes | are neat        |    $1 |
 ## Summary of Source Codes
-Odyssey source code prvided in the src folder includes the following files:
+Odyssey source code prvided in the src folder includes the following files:<br />
 1. **main.cpp**
+assign parameters (black hole spin, inclinaiton angle, image size, observed frequency, CUDA configuration...), call Task, then save CUDA computed result to output file<br />
 2. **main.cpp**
 <ol>
- 1. **main.cpp**
+ 1. **main.cpp**<br />
  assign parameters (black hole spin, inclinaiton angle, image size, observed frequency, CUDA configuration...), call Task, then save CUDA computed result to output file
  
  <li>**task1.h**</li>
