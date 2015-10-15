@@ -8,28 +8,6 @@ For flexibility, namespace structure in C++  is used for different tasks. Two de
  ([here](https://github.com/hungyipu/Odyssey/wiki/Default-Tasks-of-Odyssey-Source-Code) shows the computed results)
   
  
-Inline-style: 
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
-
-*This text will be italic*
-**This text will be bold**
-Here's an idea: why don't we take `SuperiorProject` and turn it into `**Reasonable**Project`
-```
-x = 0
-x = 2 + 2
-what is x
-```
-```ruby
-require 'redcarpet'
-markdown = Redcarpet.new("Hello World!")
-puts markdown.to_html
-```
-
-| Left-Aligned  | Center Aligned  | Right Aligned |
-| :------------ |:---------------:| -----:|
-| col 3 is      | some wordy text | $1600 |
-| col 2 is      | centered        |   $12 |
-| zebra stripes | are neat        |    $1 |
 ## Summary of Source Codes
 Odyssey source code prvided in the src folder includes the following files:<br />
 <br />
