@@ -87,8 +87,8 @@ In **main.cpp**, `task1()` is called by `main()`, then go through<br />
 |---copy memory form device to host and free CUDA memory `by AFTER()`<br />
 |<br />
 |---save result<br />
-
-By calling `GPUcompute()`, the parallel computation job detial of the  is finally assigned to  `__global__ GPU_task1work()` in **Odyssey.cu**, thern go through <br />
+## Code Structure: more details
+By calling `GPUcompute()`, the parallel computation job detial is finally assigned to  `__global__ GPU_task1work()` in **Odyssey.cu**, thern go through <br />
 `__global__ GPU_task1work()`:<br />
 |---assign parameters <br />
 |<br />
