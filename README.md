@@ -66,11 +66,11 @@ The pseudo code of Odyssey is provided below.
 main() in main.cpp
   calltask1() in main.cpp
     assign parameters 
-<br />   |
-<br />   |-set CUDA configuration (by setDims() defined )
-<br />   |
-<br />|-allocate memory on device for input and output (by PRE() defined)
-<br />|
+ |
+   |-set CUDA configuration (by setDims() defined )
+   |
+  |-allocate memory on device for input and output (by PRE() defined)
+  |
 <br />|-perform the loop for performing GRRT
 
 <br />|-copy memory form device to host and free CUDA memory (by AFTER() defined )
