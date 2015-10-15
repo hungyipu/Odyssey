@@ -32,16 +32,17 @@ puts markdown.to_html
 | zebra stripes | are neat        |    $1 |
 ## Summary of Source Codes
 Odyssey source code prvided in the src folder includes the following files:<br />
-**main.cpp**<br />
+<br />
+**main.cpp**
 assign parameters (black hole spin, inclinaiton angle, image size, observed frequency, CUDA configuration...), call Task, then save CUDA computed result to output file<br />
 
-**task1.h**<br />
+**task1.h**
 declare namespace for Task1<br />
  
- **task1.cpp**<br />
+ **task1.cpp**
 define functions for setting up CUDA computation for Task1, such as allocate memory, copy memory between Host and Deevice, run CUDA computation, free memory<br />
 
-**task2.h**<br />
+**task2.h**
  declare namespace for Task2
 
  
@@ -58,7 +59,7 @@ define functions for setting up CUDA computation for Task2, such as allocate mem
  
  
 **Odyssey_def_fun.h**<br />
- define functions needed for
+ define functions needed for:
  <ul>
  <li>ray-tracing</li>
  such as initial condition, diffrential equaitons for geodesics, adaptive size Runge-Kutta method 
