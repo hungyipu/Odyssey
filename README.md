@@ -71,14 +71,14 @@ By calling `GPUcompute()`, the parallel computation job detial is finally assign
 `__global__ GPU_task1work()`:<br />
 |---setup initial condition `initial()` <br />
 |<br />
+|---Loop start: 
+|---update the ray backward in time by adaptive size, Runge-Kutta method `rk5()`<br />
 ```
-|---Loop start: update the ray backward in time by adaptive size, Runge-Kutta method `rk5()`<br />
-|<br />
-|-------------if the ray is inside region of interest: `GPUcompute()`<br />
-|
-|<br />
-|-------------if the phton is outside region of interest: quit<br />
+if the ray is inside region of interest: do assignd job<br />
+  e.x.
+if the phton is outside region of interest: quit
 ```
+|--- Loop end
 <br />
 Odyssey is fast, accurate, and flexible. Users can simply modifying the existing Tasks in **Odyssey.cu** by assigning different return value to **main.cpp**.
 <br />
