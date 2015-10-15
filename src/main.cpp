@@ -6,7 +6,7 @@
     for General Relativistic Radiative Transfer (GRRT), following the 
     ray-tracing algorithm presented in 
     Fuerst, S. V., & Wu, K. 2007, A&A, 474, 55, 
-    and radiative transfer formulation described in 
+    and the radiative transfer formulation described in 
     Younsi, Z., Wu, K., & Fuerst, S. V. 2012, A&A, 545, A13
 
     Odyssey is distributed freely under the GNU general public license. 
