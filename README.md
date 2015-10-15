@@ -82,20 +82,26 @@ Odyssey is a fast, accurate, and flexible code. Users can simply modifying the e
 ## Code Structure
 The flow chart for the code structure of Odyssey is provided below.
 
-In main.cpp, `task1()` is called by `main()`, then go through<br />
+In **main.cpp**, `task1()` is called by `main()`, then go through<br />
 <br />
-`task1()`<br />
+`task1()`:<br />
 |---assign parameters <br />
 |<br />
 |---set CUDA configuration `setDims()`<br />
 |<br />
 |---allocate memory on device for input and output `PRE()`<br />
 |<br />
-|---perform the loop for performing GRRT `GPUcompute()`<br />
-
+|---perform the *for loop* for performing GRRT `GPUcompute()`<br />
+|<br />
 |---copy memory form device to host and free CUDA memory `by AFTER()`<br />
 |<br />
 |---save result<br />
+
+In **Odyssey.cu**, `__global__ GPU_task1work()` is invoked by `GPUcompute()`<br />
+<br />
+`__global__ GPU_task1work()`:<br />
+
+
 
 ## Reference
 "Odyssey: A PUBLIC GPU-BASED CODE FOR GENERAL-RELATIVISTIC RADIATIVE TRANSFER IN KERR
