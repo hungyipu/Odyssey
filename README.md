@@ -54,13 +54,13 @@ define functions for setting up CUDA computation for Task2, such as allocate mem
  
 **Odyssey_def.h**<br />
  define constants (such as black hole mass, distance to the black hole),   
- <br />and variables which will be saved in the GPU global memory during computation<br />
+ and variables which will be saved in the GPU global memory during computation<br />
  
  
 **Odyssey_def_fun.h**<br />
  define functions needed for
  <ul>
- **ray-tracing**
+ <li>ray-tracing</li>
  such as initial condition, diffrential equaitons for geodesics, adaptive size Runge-Kutta method 
  <li>radiative transfer</li>
  such as table of Bessel function of the second kind (for computation of thermal synchoron emission), unit conversion to Jansky or Liminosity (erg/sec)
