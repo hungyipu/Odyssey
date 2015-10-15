@@ -75,7 +75,6 @@ Odyssey source code prvided in the src folder includes the following files:
 The flow chart for the code structure of Odyssey is provided below.
 
 In **main.cpp**, `task1()` is called by `main()`, then go through<br />
-<br />
 `task1()`:<br />
 |---assign parameters <br />
 |<br />
@@ -89,8 +88,7 @@ In **main.cpp**, `task1()` is called by `main()`, then go through<br />
 |<br />
 |---save result<br />
 
-By calling `GPUcompute()`, the parallel computation job detial of the  is finally assigned to  `__global__ GPU_task1work()` in **Odyssey.cu**<br />
-<br />
+By calling `GPUcompute()`, the parallel computation job detial of the  is finally assigned to  `__global__ GPU_task1work()` in **Odyssey.cu**, thern go through <br />
 `__global__ GPU_task1work()`:<br />
 |---assign parameters <br />
 |<br />
@@ -105,11 +103,11 @@ By calling `GPUcompute()`, the parallel computation job detial of the  is finall
 |---save result<br />
 <br />
 Odyssey is a fast, accurate, and flexible code. Users can simply modifying the existing Tasks in **Odyssey.cu** by assigning different return value to **main.cpp**.
-<br />To add a new Task (e.g., task 3), users can simply take Task1 and Task2 as example then
+<br />To add a new Task (e.g., task 3), users can simply take Task1 and Task2 as examples, then
  1. add file: task3.h</li>
  2. add file: task3.cpp</li>
  3. add subroutine: task3() in **main.cpp**
- 4. describe job content in **Odyssey.cu**
+ 4. describe job details in **Odyssey.cu**
  
 ## Reference
 "Odyssey: A PUBLIC GPU-BASED CODE FOR GENERAL-RELATIVISTIC RADIATIVE TRANSFER IN KERR
