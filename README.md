@@ -66,7 +66,7 @@ In **main.cpp**, `task1()` is called by `main()`, then go through<br />
 
 
 ## Code Structure: more details
-By calling `GPUcompute()`, the parallel computation job detial is finally assigned to  `__global__ GPU_task1work()` in **Odyssey.cu**, thern go through <br />
+By calling `GPUcompute()`, the parallel computation will be performed according to the job-detials described inside `__global__ GPU_task1work()` in **Odyssey.cu**.<br />
 <br />
 `__global__ GPU_task1work()`:<br />
 |---setup initial condition `initial()` <br />
