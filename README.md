@@ -104,6 +104,7 @@ By calling `GPUcompute()`, the parallel computation job detial is finally assign
 |---save result<br />
 <br />
 Odyssey is a fast, accurate, and flexible code. Users can simply modifying the existing Tasks in **Odyssey.cu** by assigning different return value to **main.cpp**.
+<br />
 <br />To add a new Task (e.g., task 3), users can simply take Task1 and Task2 as examples, then
  1. add file: task3.h</li>
  2. add file: task3.cpp</li>
