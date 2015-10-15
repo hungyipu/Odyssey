@@ -75,7 +75,8 @@ By calling `GPUcompute()`, the parallel computation will be performed according 
 |--- update the ray backward in time by adaptive size, Runge-Kutta method `rk5()`<br />
 ```
 job-details:
-   ex. task1: when the ray hit the disk, compute the redshift
+   ex. when the ray hit the disk, compute the redshift
+       (you can define a different job here)
 ```
 |--- exit if the ray enter the black hole or outside the region of interest, otherwise, contine next update<br />
 |================Loop End=====================<br />
