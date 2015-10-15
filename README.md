@@ -69,14 +69,6 @@ Odyssey source code prvided in the src folder includes the following files:
  such as table of Bessel function of the second kind (for computation of thermal synchoron emission), unit conversion to Jansky or Liminosity (erg/sec)
  </ul>
 </ol>
-Odyssey is a fast, accurate, and flexible code. Users can simply modifying the existing Tasks in Odyssey.cu by assigning different return value to main.cpp.
-
-<br />To add a new Task (e.g., task 3), users can simply take Task1 and Task2 as example then
- 1. add file: task3.h</li>
- 2. add file: task3.cpp</li>
- 3. add subroutine: task3() in main.cpp
- 4. describe job content in Odyssey.cu
-
 
 
 ## Code Structure
@@ -100,9 +92,14 @@ In **main.cpp**, `task1()` is called by `main()`, then go through<br />
 In **Odyssey.cu**, `__global__ GPU_task1work()` is invoked by `GPUcompute()`<br />
 <br />
 `__global__ GPU_task1work()`:<br />
-
-
-
+<br />
+Odyssey is a fast, accurate, and flexible code. Users can simply modifying the existing Tasks in **Odyssey.cu** by assigning different return value to **main.cpp**.
+<br />To add a new Task (e.g., task 3), users can simply take Task1 and Task2 as example then
+ 1. add file: task3.h</li>
+ 2. add file: task3.cpp</li>
+ 3. add subroutine: task3() in **main.cpp**
+ 4. describe job content in **Odyssey.cu**
+ 
 ## Reference
 "Odyssey: A PUBLIC GPU-BASED CODE FOR GENERAL-RELATIVISTIC RADIATIVE TRANSFER IN KERR
 SPACE-TIME"
