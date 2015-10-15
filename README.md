@@ -8,10 +8,8 @@ For flexibility, namespace structure in C++  is used for different tasks. Two de
  </ol>
  The computed result is shown in the [wiki](https://github.com/hungyipu/Odyssey/wiki) . 
  
- Reference-style: 
-![alt text][logo]
-
-[logo]: http://www.asiaa.sinica.edu.tw/~hypu/work.png "Logo Title Text 2"
+Inline-style: 
+![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
 
 *This text will be italic*
 **This text will be bold**
@@ -87,7 +85,9 @@ Odyssey is a fast, accurate, and flexible code. Users can simply modifying the e
 The pseudo code of Odyssey is provided below.
 
 main() `in main.cpp` <br />
-task1() `in main.cpp` <br />
+|
++task1() `in main.cpp` <br />
+|
 ---assign parameters <br />
 <br />
 ---set CUDA configuration `by setDims() defined`<br />
