@@ -8,7 +8,11 @@ For flexibility, namespace structure in C++  is used for different tasks. Two de
  </ol>
  The computed result is shown in the [wiki](https://github.com/hungyipu/Odyssey/wiki) . 
  
-
+| Left-Aligned  | Center Aligned  | Right Aligned |
+| :------------ |:---------------:| -----:|
+| col 3 is      | some wordy text | $1600 |
+| col 2 is      | centered        |   $12 |
+| zebra stripes | are neat        |    $1 |
 ## Summary of Source Codes
 Odyssey source code prvided in the src folder includes the following files:
 <ol>
