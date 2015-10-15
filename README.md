@@ -3,8 +3,8 @@ Odyssey is a public, GPU-based General Relativistic Radiative Transfer (GRRT) co
 
 For flexibility, namespace structure in C++  is used for different tasks. Two defalut tasks are presented in the sourse code. Including:
 
- *The redshift of the Keplerian disk</li>
- *The image of Keplerian rotating shell at 340GHz</li>
+ 1. The redshift of the Keplerian disk</li>
+ 2. The image of Keplerian rotating shell at 340GHz</li>
  
  The computed results are shown [here](https://github.com/hungyipu/Odyssey/wiki/Default-Tasks-of-Odyssey-Source-Code) . 
  
