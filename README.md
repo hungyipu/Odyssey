@@ -62,12 +62,12 @@ Odyssey source code prvided in the src folder includes the following files:
  
  <li>Odyssey_def_fun.h</li>
  define functions needed for
- 
- * ray-tracing
+ <ul>
+ <li>ray-tracing</li>
  such as initial condition, diffrential equaitons for geodesics, adaptive size Runge-Kutta method 
- * radiative transfer
+ <li>radiative transfer</li>
  such as table of Bessel function of the second kind (for computation of thermal synchoron emission), unit conversion to Jansky or Liminosity (erg/sec)
- 
+ </ul>
 </ol>
 Odyssey is a fast, accurate, and flexible code. Users can simply modifying the existing Tasks in Odyssey.cu by assigning different return value to main.cpp.
 
