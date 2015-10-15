@@ -33,18 +33,18 @@ puts markdown.to_html
 ## Summary of Source Codes
 Odyssey source code prvided in the src folder includes the following files:
 <ol>
- <li>main.cpp</li>
+ <li>**main.cpp**</li>
  assign parameters (black hole spin, inclinaiton angle, image size, observed frequency, CUDA configuration...), call Task, then save CUDA computed result to output file
  
- <li>task1.h</li>
+ <li>**task1.h**</li>
  declare namespace for Task1
  
  
- <li>task1.cpp</li>
+ <li>**task1.cpp**</li>
  define functions for setting up CUDA computation for Task1, such as allocate memory, copy memory between Host and Deevice, run CUDA computation, free memory
 
  
- <li>task2.h</li>
+ <li>**task2.h**</li>
  declare namespace for Task2
 
  
@@ -75,6 +75,7 @@ Odyssey source code prvided in the src folder includes the following files:
 The flow chart for the code structure of Odyssey is provided below.
 
 In **main.cpp**, `task1()` is called by `main()`, then go through<br />
+<br />
 `task1()`:<br />
 |---assign parameters <br />
 |<br />
@@ -89,6 +90,7 @@ In **main.cpp**, `task1()` is called by `main()`, then go through<br />
 |---save result<br />
 ## Code Structure: more details
 By calling `GPUcompute()`, the parallel computation job detial is finally assigned to  `__global__ GPU_task1work()` in **Odyssey.cu**, thern go through <br />
+<br />
 `__global__ GPU_task1work()`:<br />
 |---assign parameters <br />
 |<br />
