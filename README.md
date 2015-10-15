@@ -39,9 +39,9 @@ defines functions for setting up CUDA computation for Task2<br />
 **Odyssey_def_fun.h**
  defines functions needed for:
  <ul>
- <li>ray-tracing</li>
+ <li>Ray-Tracing</li>
  such as initial condition, diffrential equaitons for geodesics, adaptive size Runge-Kutta method 
- <li>radiative transfer</li>
+ <li>Radiative Transfer</li>
  such as table of Bessel function of the second kind (for computation of thermal synchoron emission), unit conversion to Jansky or Liminosity (erg/sec)
  </ul>
 
@@ -81,7 +81,7 @@ By calling `GPUcompute()`, the parallel computation job detial is finally assign
 |<br />
 |---save result<br />
 <br />
-Odyssey is a fast, accurate, and flexible code. Users can simply modifying the existing Tasks in **Odyssey.cu** by assigning different return value to **main.cpp**.
+Odyssey is fast, accurate, and flexible. Users can simply modifying the existing Tasks in **Odyssey.cu** by assigning different return value to **main.cpp**.
 <br />
 <br />To add a new Task (e.g., task 3), following recipe can be useful:
  1. add file: task3.h</li>
