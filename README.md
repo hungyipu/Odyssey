@@ -82,8 +82,8 @@ Odyssey is a fast, accurate, and flexible code. Users can simply modifying the e
 ## Code Structure
 The flow chart for the code structure of Odyssey is provided below.
 
-In main.cpp, `task1()` is called by `main()`, then go through
-`task1()`
+In main.cpp, `task1()` is called by `main()`, then go through<br />
+`task1()`<br />
 |---assign parameters <br />
 |<br />
 |---set CUDA configuration `setDims()`<br />
