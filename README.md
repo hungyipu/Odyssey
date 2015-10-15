@@ -91,7 +91,7 @@ task1() `in main.cpp` <br />
     |
     | --perform the loop for performing GRRT
 
-    | --copy memory form device to host and free CUDA memory *by AFTER() defined *
+    | --copy memory form device to host and free CUDA memory 'by AFTER() defined '
     |
     | --save result
 
