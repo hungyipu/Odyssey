@@ -8,7 +8,8 @@ For flexibility, namespace structure in C++  is used for different tasks. Two de
  </ol>
  The computed result is shown in the [wiki](https://github.com/hungyipu/Odyssey/wiki) . 
  
-
+*This text will be italic*
+**This text will be bold**
 Here's an idea: why don't we take `SuperiorProject` and turn it into `**Reasonable**Project`
 ```
 x = 0
