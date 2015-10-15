@@ -95,5 +95,5 @@ Odyssey is fast, accurate, and flexible. User can easiliy assign a different job
 SPACE-TIME"
 
 ## Resource
-An educational software, [Odyssey_Edu] (https://odysseyedu.wordpress.com/), is devloped together with Odyssey for visulizing the ray trjectries.
+An educational software, [Odyssey_Edu] (https://odysseyedu.wordpress.com/), is devloped together with Odyssey for visulizing the ray trjectories.
 
