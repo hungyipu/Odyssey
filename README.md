@@ -92,12 +92,13 @@ Odyssey is fast, accurate, and flexible. User can easiliy assign a different job
  
 ## Reference
 "Odyssey: A PUBLIC GPU-BASED CODE FOR GENERAL-RELATIVISTIC RADIATIVE TRANSFER IN KERR
-SPACE-TIME"
-
-## Resource
-An educational software, [Odyssey_Edu] (https://odysseyedu.wordpress.com/), is devloped together with Odyssey for visulizing the ray trjectories.
+SPACE-TIME" by Hung-Yi PU, 2 , Kiyun Yun, Ziri Younsi, and Suk-Jin Yoon
 
 <img align="center" src="http://www.asiaa.sinica.edu.tw/~hypu/logo_asiaa.png" width="60">
 <img align="center" src="http://www.asiaa.sinica.edu.tw/~hypu/logo_yonsei.jpg" width="65">
 <img align="center" src="http://www.asiaa.sinica.edu.tw/~hypu/logo_GU.gif" width="120">
+
+## Resource
+An educational software, [Odyssey_Edu] (https://odysseyedu.wordpress.com/), is devloped together with Odyssey for visulizing the ray trjectories.
+
 
