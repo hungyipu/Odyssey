@@ -98,7 +98,7 @@ SPACE-TIME" by Hung-Yi Pu, Kiyun Yun, Ziri Younsi, and Suk-Jin Yoon
 <img align="center" src="http://www.asiaa.sinica.edu.tw/~hypu/logo_yonsei.jpg" width="65">
 <img align="center" src="http://www.asiaa.sinica.edu.tw/~hypu/logo_GU.gif" width="120">
 
-## Resource: Visulizing the ray trajectories around a rotating black hole
+## Software: visulizing the ray trajectories around a rotating black hole
 An educational software, [Odyssey_Edu] (https://odysseyedu.wordpress.com/), is devloped together with Odyssey for visulizing the ray trajectories in Kerr spacetime.
 
 
