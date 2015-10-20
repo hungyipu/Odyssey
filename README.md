@@ -98,6 +98,7 @@ SPACE-TIME"
 An educational software, [Odyssey_Edu] (https://odysseyedu.wordpress.com/), is devloped together with Odyssey for visulizing the ray trjectories.
 
 <img src="http://www.asiaa.sinica.edu.tw/~hypu/logo_asiaa.png" width="48">
+![](http://www.asiaa.sinica.edu.tw/~hypu/logo_asiaa.png?raw=true)
 ![alt text](http://www.asiaa.sinica.edu.tw/~hypu/logo_asiaa.png  "")
 ![alt text](http://www.asiaa.sinica.edu.tw/~hypu/logo_yonsei.jpg  "")
 ![alt text](http://www.asiaa.sinica.edu.tw/~hypu/logo_GU.gif  "")
