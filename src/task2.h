@@ -7,6 +7,7 @@
     Fuerst, S. V., & Wu, K. 2007, A&A, 474, 55, 
     and the radiative transfer formulation described in 
     Younsi, Z., Wu, K., & Fuerst, S. V. 2012, A&A, 545, A13
+    
     Odyssey is distributed freely under the GNU general public license. 
     You can redistribute it and/or modify it under the terms of the License
         http://www.gnu.org/licenses/gpl.txt
