@@ -1,15 +1,15 @@
 # Odyssey
 Odyssey is a public, GPU-based General Relativistic Radiative Transfer (GRRT) code for computing images and/or spectra in Kerr metric, which described the spacetime aroung a rotating black hole. Implemented in CUDA C/C++, Odyssey is based on the ray-tracing algorithm presented in [Fuerst & Wu (2004)](http://adsabs.harvard.edu/abs/2004A%26A...424..733F), and radiative transfer formulation described in [Younsi, Wu, & Fuerst. (2012)](http://adsabs.harvard.edu/abs/2012A%26A...545A..13Y).
 
-For flexibility, namespace structure in C++  is used for different tasks. Two defalut tasks are presented in the sourse code. Including :
+For flexibility, namespace structure in C++  is used for different tasks. Two default tasks are presented in the source code. Including :
 
- 1. The redshift of the Keplerian disk</li>
+ 1. The redshift of a Keplerian disk</li>
  2. The image of Keplerian rotating shell at 340GHz</li>
- ([here](https://github.com/hungyipu/Odyssey/wiki/Default-Tasks-of-Odyssey-Source-Code) shows the computed results)
+ (the computed results are shown [here](https://github.com/hungyipu/Odyssey/wiki/Default-Tasks-of-Odyssey-Source-Code))
   
  
 ## Summary of Source Codes
-Odyssey source code prvided in the src folder includes the following files:<br />
+Odyssey source code provided in the src folder includes the following files:<br />
 <br />
 **main.cpp**
 assign parameters (black hole spin, inclinaiton angle, image size, observed frequency, CUDA configuration...), call Task, then save CUDA computed result to output file<br />
@@ -29,7 +29,7 @@ defines functions for setting up CUDA computation for Task2<br />
 
  
 **Odyssey.cu**
- describes jobs of specific Task, such as `__global__ GPU_task1work()`, `__global__ GPU_task1work()`. Computation result will retun to **main.cpp**<br />
+ describes jobs of specific Task, such as `__global__ GPU_task1work()`, `__global__ GPU_task1work()`. Computation result will return to **main.cpp**<br />
  
 **Odyssey_def.h**
  defines constants (such as black hole mass, distance to the black hole),   
@@ -40,16 +40,16 @@ defines functions for setting up CUDA computation for Task2<br />
  defines functions needed for:
  <ul>
  <li>Ray-Tracing</li>
- such as initial condition  `initial()` , diffrential equaitons for geodesics, adaptive size Runge-Kutta method `rk5()`
+ such as initial conditions  `initial()` , differential equations for geodesics, adaptive step size Runge-Kutta method `rk5()`
  <li>Radiative Transfer</li>
- such as table of Bessel function of the second kind (for computation of thermal synchoron emission), unit conversion to Jansky or Liminosity (erg/sec)
+ such as table of Bessel function of the second kind (for computation of thermal synchoron emission), unit conversion to Jansky or Luminosity (erg/sec)
  </ul>
 
 
 ## Code Structure
 The flow chart for the code structure of Odyssey is provided below.
 
-In **main.cpp**, `task1()` is called by `main()`, then go through<br />
+In **main.cpp**, `task1()` is called by `main()`, then go through to<br />
 <br />
 `task1()`:<br />
 |---assign parameters <br />
@@ -78,20 +78,20 @@ job-details:
    ex. when the ray hit the disk, compute the redshift
        (you can define a different job here)
 ```
-|--- exit if the ray enter the black hole or outside the region of interest, otherwise, contine the Loop<br />
+|--- exit if the ray enters the black hole or moves outside the region of interest, otherwise, contine the Loop<br />
 |================Loop End=====================<br />
 
 <br />
-Odyssey is fast, accurate, and flexible. User can easiliy assign a different job by simply modifying the job-details. 
+Odyssey is fast, accurate, and flexible. Users can easiliy assign a different job by simply modifying the job-details. 
 <br />
-<br />Alternatively, User can also add a new Task (e.g., task 3) by following suggested recipe:
+<br />Alternatively, users can also add a new Task (e.g., task 3) by following suggested recipe:
  1. add file: task3.h</li>
  2. add file: task3.cpp</li>
  3. add subroutine: task3() in **main.cpp**
  4. add related subroutines and describe job-details in **Odyssey.cu**
  
 ## Credit
-Odyssey is distributed freely under the GNU general public license. We appreciate users cite the following paper in their publications:
+Odyssey is distributed freely under the GNU general public license. We ask users to cite the following paper in their publications:
 <br />
 "Odyssey: A PUBLIC GPU-BASED CODE FOR GENERAL-RELATIVISTIC RADIATIVE TRANSFER IN KERR
 SPACE-TIME" by Hung-Yi Pu, Kiyun Yun, Ziri Younsi, and Suk-Jin Yoon (submitted to ApJ)
@@ -102,6 +102,6 @@ SPACE-TIME" by Hung-Yi Pu, Kiyun Yun, Ziri Younsi, and Suk-Jin Yoon (submitted t
 <img align="center" src="http://www.asiaa.sinica.edu.tw/~hypu/logo_MSSL.png" width="120">
 
 # Odyssey_Edu
-An educational software, [Odyssey_Edu] (https://odysseyedu.wordpress.com/), is devloped together with Odyssey for visualizing the ray trajectories in Kerr spacetime.
+An educational software, [Odyssey_Edu] (https://odysseyedu.wordpress.com/), is devloped together with Odyssey for visualizing the ray trajectories in the Kerr spacetime.
 
 
