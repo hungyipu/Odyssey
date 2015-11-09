@@ -91,7 +91,8 @@ Odyssey is fast, accurate, and flexible. Users can easiliy assign a different jo
  4. add related subroutines and describe job-details in **Odyssey.cu**
  
 ## Credit
-Odyssey is distributed freely under the GNU general public license. We ask users to cite the following paper in their publications:
+Odyssey is distributed freely under the GNU general public license. We ask that users of Odyssey cite the following paper in their subsequent scientific literature and publications which result from the use of any part of Odyssey:
+
 <br />
 "Odyssey: A PUBLIC GPU-BASED CODE FOR GENERAL-RELATIVISTIC RADIATIVE TRANSFER IN KERR
 SPACE-TIME" by Hung-Yi Pu, Kiyun Yun, Ziri Younsi, and Suk-Jin Yoon (submitted to ApJ)
