@@ -90,9 +90,10 @@ Odyssey is fast, accurate, and flexible. User can easiliy assign a different job
  3. add subroutine: task3() in **main.cpp**
  4. add related subroutines and describe job-details in **Odyssey.cu**
  
-## Reference
+## Credit
+Odyssey is distributed freely under the GNU general public license. We appreciate users cite the following paper in their publications:
 "Odyssey: A PUBLIC GPU-BASED CODE FOR GENERAL-RELATIVISTIC RADIATIVE TRANSFER IN KERR
-SPACE-TIME" by Hung-Yi Pu, Kiyun Yun, Ziri Younsi, and Suk-Jin Yoon
+SPACE-TIME" by Hung-Yi Pu, Kiyun Yun, Ziri Younsi, and Suk-Jin Yoon (submitted to ApJ)
 
 <img align="center" src="http://www.asiaa.sinica.edu.tw/~hypu/logo_asiaa.png" width="60">
 <img align="center" src="http://www.asiaa.sinica.edu.tw/~hypu/logo_yonsei.jpg" width="65">
