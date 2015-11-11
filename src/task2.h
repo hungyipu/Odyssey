@@ -12,6 +12,12 @@
     You can redistribute it and/or modify it under the terms of the License
         http://www.gnu.org/licenses/gpl.txt
     The current distribution website is:
-	https://github.com/hungyipu/Odyssey/
+	https://github.com/hungyipu/Odyssey/ 
+	
+    We ask that users of Odyssey cite the following paper in their subsequent scientific 
+    literature and publications which result from the use of any part of Odyssey:
+    "Odyssey: A PUBLIC GPU-BASED CODE FOR GENERAL-RELATIVISTIC RADIATIVE TRANSFER 
+    IN KERR SPACE-TIME" 
+    by Hung-Yi Pu, Kiyun Yun, Ziri Younsi, and Suk-Jin Yoon (submitted to ApJ) 
 	
 ***********************************************************************************/
