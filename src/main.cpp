@@ -21,7 +21,6 @@
     by Hung-Yi Pu, Kiyun Yun, Ziri Younsi, and Suk-Jin Yoon (submitted to ApJ) 
 	
 ***********************************************************************************/
-
 #pragma once
 
 #include <cuda.h>
@@ -67,7 +66,7 @@ namespace OdysseyTasks
 
 
 		mission.PRE(VariablesIn);
-		  
+		 
 
 		//compute number of grides, to cover the whole image plane; eqn (?)
 		ImaDimX = (int)ceil((double)SIZE / (BlockDimX * GridDimX));
@@ -119,11 +118,36 @@ namespace OdysseyTasks
 
 		//assign parameters here
 		A			    = 0.;					 // black hole spin
-		INCLINATION     = 45.;	 // inclination angle in unit of degree		                
+		INCLINATION     = 68.;	 // inclination angle in unit of degree		                
 		SIZE			= 128;					 // pixels of the image
 		freq_obs        = 340e9;                 // observed frequency
 
 		printf("image size = %.0f  x  %0.f  pixels\n",SIZE,SIZE);
+
+
+		//**************** generate snapshots
+		char filename[256];
+		int len;
+		len=sprintf(filename,"nth_");
+        
+		freq_obs            = 1e9;
+		double freq_obs_end = 1e15;
+		int idx=0;
+		int np=0; // 0: compute whole range of frequency until greq_obs_end      1: compute only 150/340/1000GHz
+
+		for (;freq_obs<=freq_obs_end && np<4;){
+
+			if (np==1)
+					freq_obs            = 150e9;
+			if (np==2)
+					freq_obs            = 340e9;
+			if (np==3)
+					freq_obs            = 1000e9;
+
+
+		printf("np=%d  freq=%e now\n",np,freq_obs);
+        sprintf(filename+len,"%02d",idx);
+
 
 
 		//assign CUDA congfigurations
@@ -159,20 +183,34 @@ namespace OdysseyTasks
 
 		//	Saving result 
 		FILE *fp1;
-		fp1=fopen("Output_task2.txt","w");  
-		fprintf(fp1,"###Computed by Odyssey\n");
-		fprintf(fp1,"###output data:(alpha,  beta,  flux)\n");
+		fp1=fopen(filename,"w");  // use alpha-beta coordinate
+		printf("(f=%e) write to file ---> %s \n",freq_obs,filename);
+		
+		
+			//fprintf(fp1,"###Source: Sgr A*\n");
+			//fprintf(fp1,"###output data:(grid_x,  luminosity, flux (Jy)  )\n");
+			//fprintf(fp1,"###spin = %f\n",A);
+			//fprintf(fp1,"###i    = %f\n",INCLINATION);
+			//fprintf(fp1,"###size = %f x %f (pixles)\n",SIZE, SIZE);
+			//fprintf(fp1,"###obsrved frequency %e\n",freq_obs);
+			fprintf(fp1, "# %e\n",freq_obs);
 
-		for(int j = 0; j < (int)SIZE; j++)
-		for(int i = 0; i < (int)SIZE; i++)
-		{
-			fprintf(fp1, "%f\t", (float)Results[3 * ((int)SIZE * j + i) + 0]);
-			fprintf(fp1, "%f\t", (float)Results[3 * ((int)SIZE * j + i) + 1]);
-			fprintf(fp1, "%f\n", (float)Results[3 * ((int)SIZE * j + i) + 2]);
-		}
+			for(int j = 0; j < (int)SIZE; j++)
+			for(int i = 0; i < (int)SIZE; i++)
+			{
+				fprintf(fp1, "%f\t", (float)Results[3 * ((int)SIZE * j + i) + 0]);
+				fprintf(fp1, "%e\t", (float)Results[3 * ((int)SIZE * j + i) + 1]);
+				fprintf(fp1, "%e\n", (float)Results[3 * ((int)SIZE * j + i) + 2]);
+			}
 		fclose(fp1);
 
+		//freq_obs=freq_obs*1.1;  // for smooth-spec
+		freq_obs=freq_obs*1.5;   // not that smooth
+		if (np>0)  
+			np++;
 
+		idx++;
+		}
 	}
 }
 
