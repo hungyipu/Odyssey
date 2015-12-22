@@ -75,14 +75,13 @@ __global__ void GPU_task1work(double* ResultsPixel, double* VariablesIn, int Gri
 
 	double Rdisk	 = 50.;
 	double ima_width = 55.;
-    double offset_shoot = 2.*ima_width/(int)SIZE; 
+        double offset_shoot = 2.*ima_width/(int)SIZE; 
         
-    double s1  = ima_width;                      
-    double s2  = 2.*ima_width/((int)SIZE+1.);   
-        
-          
-    grid_x = -s1 + s2*(X1+1.);
-    grid_y = -s1 + s2*(Y1+1.);
+        double s1  = ima_width;                      
+        double s2  = 2.*ima_width/((int)SIZE+1.);   
+       
+        grid_x = -s1 + s2*(X1+1.);
+        grid_y = -s1 + s2*(Y1+1.);
         
 
 	initial(Variables, VariablesIn, y, dydx);
@@ -161,8 +160,8 @@ void GPU_assigntask1(double* ResultsPixel, double* VariablesIn, int GridIdxX, in
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
 __device__ double task2fun_GetZ(double* Variables, double* VariablesIn, double *y)
 {
-	double ut,uphi,ur,E_local;
-	double E_inf= -1.0;   
+    double ut,uphi,ur,E_local;
+    double E_inf= -1.0;   
     double r=y[0];
     double theta=y[1];
     double pr=y[4];
