@@ -44,19 +44,19 @@ namespace OdysseyTasks
 
 		double  VariablesIn[VarINNUM];
 		double* Results;
-		int	    ImaDimX, ImaDimY;                //=number of grids; the coordinate of each grid is given by (GridIdxX,GridIdY)
-		int		GridDimX, GridDimY;			     //=number of blocks; the coordinate of each block is given by (blockIdx.x ,blockIdx.y )
-		int     BlockDimX, BlockDimY;			 //=number of threads; the coordinate of each thread is given by (threadIdx.x,threadIdx.y)
+		int	    ImaDimX, ImaDimY;                	//=number of grids; the coordinate of each grid is given by (GridIdxX,GridIdY)
+		int		GridDimX, GridDimY;		//=number of blocks; the coordinate of each block is given by (blockIdx.x ,blockIdx.y )
+		int     BlockDimX, BlockDimY;			//=number of threads; the coordinate of each thread is given by (threadIdx.x,threadIdx.y)
 
-		//assign parameters here
-		A			    = 0.;					 // black hole spin
-		INCLINATION     = acos(0.25)/PI*180.;	 // inclination angle in unit of degree		                
-		SIZE			= 128;					 // pixels of the image
+		//assign parameters
+		A			    = 0.;		// black hole spin
+		INCLINATION     = acos(0.25)/PI*180.;	 	// inclination angle in unit of degree		                
+		SIZE			= 512;			// pixels of the image
 
 		printf("image size = %.0f  x  %0.f  pixels\n",SIZE,SIZE);
 
 
-		//assign CUDA congfigurations
+		//assign CUDA congfiguration
 		BlockDimX = 100;
 		BlockDimY = 1;
 		GridDimX  = 1;
@@ -64,14 +64,16 @@ namespace OdysseyTasks
 		mission.setDims(GridDimX, GridDimY, BlockDimX, BlockDimY);
 
 
-
+		//allocate memory on device for input and output
 		mission.PRE(VariablesIn);
 		 
 
-		//compute number of grides, to cover the whole image plane; eqn (?)
+		//compute number of grids, to cover the whole image plane
 		ImaDimX = (int)ceil((double)SIZE / (BlockDimX * GridDimX));
-        ImaDimY = (int)ceil((double)SIZE / (BlockDimY * GridDimY));
+                ImaDimY = (int)ceil((double)SIZE / (BlockDimY * GridDimY));
 
+
+		//perform the for-loop for GRRT 
 		for(int GridIdxY = 0; GridIdxY < ImaDimY; GridIdxY++){
         	for(int GridIdxX = 0; GridIdxX < ImaDimX; GridIdxX++){                			
 				mission.GPUCompute(GridIdxX, GridIdxY);
@@ -82,12 +84,11 @@ namespace OdysseyTasks
 		
 		Results = new double[(int)SIZE * (int)SIZE * 3];
 
+		//copy memory form device to host and free CUDA memory
 		mission.AFTER(Results);
 
 
-
-
-		//	Saving result 
+		//save result to output
 		FILE *fp1;
 		fp1=fopen("Output_task1.txt","w");  
 		fprintf(fp1,"###Computed by Odyssey\n");
@@ -112,42 +113,17 @@ namespace OdysseyTasks
 
 		double  VariablesIn[VarINNUM];
 		double* Results;
-		int	    ImaDimX, ImaDimY;                //=number of grids; the coordinate of each grid is given by (GridIdxX,GridIdY)
-		int		GridDimX, GridDimY;			     //=number of blocks; the coordinate of each block is given by (blockIdx.x ,blockIdx.y )
-		int     BlockDimX, BlockDimY;			 //=number of threads; the coordinate of each thread is given by (threadIdx.x,threadIdx.y)
+		int	    ImaDimX, ImaDimY;                	//=number of grids; the coordinate of each grid is given by (GridIdxX,GridIdY)
+		int		GridDimX, GridDimY;		//=number of blocks; the coordinate of each block is given by (blockIdx.x ,blockIdx.y )
+		int     BlockDimX, BlockDimY;			//=number of threads; the coordinate of each thread is given by (threadIdx.x,threadIdx.y)
 
-		//assign parameters here
-		A			    = 0.;					 // black hole spin
-		INCLINATION     = 68.;	 // inclination angle in unit of degree		                
-		SIZE			= 128;					 // pixels of the image
-		freq_obs        = 340e9;                 // observed frequency
+		//assign parameters
+		A			    = 0.;		// black hole spin
+		INCLINATION     = 45.;	                   	// inclination angle in unit of degree		                
+		SIZE			= 128;			// pixels of the image
+		freq_obs        = 340e9;                       	// observed frequency
 
 		printf("image size = %.0f  x  %0.f  pixels\n",SIZE,SIZE);
-
-
-		//**************** generate snapshots
-		char filename[256];
-		int len;
-		len=sprintf(filename,"nth_");
-        
-		freq_obs            = 1e9;
-		double freq_obs_end = 1e15;
-		int idx=0;
-		int np=0; // 0: compute whole range of frequency until greq_obs_end      1: compute only 150/340/1000GHz
-
-		for (;freq_obs<=freq_obs_end && np<4;){
-
-			if (np==1)
-					freq_obs            = 150e9;
-			if (np==2)
-					freq_obs            = 340e9;
-			if (np==3)
-					freq_obs            = 1000e9;
-
-
-		printf("np=%d  freq=%e now\n",np,freq_obs);
-        sprintf(filename+len,"%02d",idx);
-
 
 
 		//assign CUDA congfigurations
@@ -158,14 +134,16 @@ namespace OdysseyTasks
 		mission.setDims(GridDimX, GridDimY, BlockDimX, BlockDimY);
 
 
-
+		//allocate memory on device for input and output
 		mission.PRE(VariablesIn);
 		 
 
-		//compute number of grides, to cover the whole image plane; eqn (?)
+		//compute number of grides, to cover the whole image plane
 		ImaDimX = (int)ceil((double)SIZE / (BlockDimX * GridDimX));
         ImaDimY = (int)ceil((double)SIZE / (BlockDimY * GridDimY));
 
+
+		//perform the for-loop for GRRT 
 		for(int GridIdxY = 0; GridIdxY < ImaDimY; GridIdxY++){
         	for(int GridIdxX = 0; GridIdxX < ImaDimX; GridIdxX++){                			
 				mission.GPUCompute(GridIdxX, GridIdxY);
@@ -176,46 +154,34 @@ namespace OdysseyTasks
 		
 		Results = new double[(int)SIZE * (int)SIZE * 3];
 
+		//copy memory form device to host and free CUDA memory
 		mission.AFTER(Results);
 
 
 
 
-		//	Saving result 
+		//save result to output
 		FILE *fp1;
-		fp1=fopen(filename,"w");  // use alpha-beta coordinate
-		printf("(f=%e) write to file ---> %s \n",freq_obs,filename);
-		
-		
-			//fprintf(fp1,"###Source: Sgr A*\n");
-			//fprintf(fp1,"###output data:(grid_x,  luminosity, flux (Jy)  )\n");
-			//fprintf(fp1,"###spin = %f\n",A);
-			//fprintf(fp1,"###i    = %f\n",INCLINATION);
-			//fprintf(fp1,"###size = %f x %f (pixles)\n",SIZE, SIZE);
-			//fprintf(fp1,"###obsrved frequency %e\n",freq_obs);
-			fprintf(fp1, "# %e\n",freq_obs);
+		fp1=fopen("Output_task2.txt","w");  
+		fprintf(fp1,"###Computed by Odyssey\n");
+		fprintf(fp1,"###output data:(alpha,  beta, Luminosity (erg/sec))\n");
 
-			for(int j = 0; j < (int)SIZE; j++)
-			for(int i = 0; i < (int)SIZE; i++)
-			{
-				fprintf(fp1, "%f\t", (float)Results[3 * ((int)SIZE * j + i) + 0]);
-				fprintf(fp1, "%e\t", (float)Results[3 * ((int)SIZE * j + i) + 1]);
-				fprintf(fp1, "%e\n", (float)Results[3 * ((int)SIZE * j + i) + 2]);
-			}
+		for(int j = 0; j < (int)SIZE; j++)
+		for(int i = 0; i < (int)SIZE; i++)
+		{
+			fprintf(fp1, "%f\t", (float)Results[3 * ((int)SIZE * j + i) + 0]);
+			fprintf(fp1, "%f\t", (float)Results[3 * ((int)SIZE * j + i) + 1]);
+			fprintf(fp1, "%f\n", (float)Results[3 * ((int)SIZE * j + i) + 2]);
+		}
 		fclose(fp1);
 
-		//freq_obs=freq_obs*1.1;  // for smooth-spec
-		freq_obs=freq_obs*1.5;   // not that smooth
-		if (np>0)  
-			np++;
 
-		idx++;
-		}
 	}
 }
 
 void main()
 {
 	cudaSetDevice(0);	
-	OdysseyTasks::task2();
+	OdysseyTasks::task1();
+	//OdysseyTasks::task2();
 }
