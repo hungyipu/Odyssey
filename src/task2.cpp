@@ -21,3 +21,50 @@
     by Hung-Yi Pu, Kiyun Yun, Ziri Younsi, and Suk-Jin Yoon (submitted to ApJ) 
 	
 ***********************************************************************************/
+#include "task2.h"
+
+namespace Task2
+{
+
+	void mission2::setDims(int GridDimX, int GridDimY, int BlockDimX, int BlockDimY)
+	{
+		mGridDimx  = GridDimX;
+		mGridDimy  = GridDimY;
+		mBlockDimx = BlockDimX;
+		mBlockDimy = BlockDimY;
+	}
+	
+
+	void mission2::PRE(double* VariablesIn)
+	{
+
+		mSize = (int)SIZE;
+
+	    cudaMalloc(&d_ResultsPixel           , sizeof(double) * mSize * mSize * 3);
+		cudaMalloc(&d_VariablesIn        , sizeof(double) * VarINNUM);
+		cudaMemcpy(d_VariablesIn	 , VariablesIn	 , sizeof(double) * VarINNUM	, cudaMemcpyHostToDevice);
+	}
+
+
+	
+	void mission2::AFTER(double* ResultHit)
+	{
+		cudaMemcpy(ResultHit, d_ResultsPixel, sizeof(double) * mSize * mSize * 3, cudaMemcpyDeviceToHost);
+	
+		cudaFree(d_ResultsPixel);
+		cudaFree(d_VariablesIn);
+	}
+
+
+
+	extern "C" 
+	void GPU_assigntask2(double* ResultsPixel, double* VariablesIn, int GridIdxX, int GridIdxY,
+									int GridDimX, int GridDimY, int BlockDimX, int BlockDimY);
+
+	void mission2::GPUCompute(int GridIdxX, int GridIdxY)
+	{
+		GPU_assigntask2(d_ResultsPixel, d_VariablesIn, GridIdxX, GridIdxY,
+						mGridDimx, mGridDimy, mBlockDimx, mBlockDimy);
+	}
+
+}
