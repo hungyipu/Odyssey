@@ -15,29 +15,29 @@ Odyssey source code provided in the src folder includes the following files:<br 
 assign parameters (black hole spin, inclinaiton angle, image size, observed frequency, CUDA configuration...), call Task, then save CUDA computed result to output file<br />
 
 **task1.h**
-declares namespace for Task1<br />
+declare namespace for Task1<br />
  
  **task1.cpp**
-defines functions for setting up CUDA computation for Task1, including `setDims()`, `PRE()`, `GPUcompute()`, and `AFTER()`<br />
+define functions for setting up CUDA computation for Task1, including `setDims()`, `PRE()`, `GPUcompute()`, and `AFTER()`<br />
 
 **task2.h**
- declares namespace for Task2
+declare namespace for Task2
 
  
 **task2.cpp**
-defines functions for setting up CUDA computation for Task2<br />
+define functions for setting up CUDA computation for Task2<br />
 
  
 **Odyssey.cu**
- describes jobs of specific Task, such as `__global__ GPU_task1work()`, `__global__ GPU_task1work()`. Computation result will return to **main.cpp**<br />
+ describe job details of each specific Tasks, such as `__global__ GPU_task1work()`, `__global__ GPU_task1work()`. Computation result will return to **main.cpp**<br />
  
 **Odyssey_def.h**
- defines constants (such as black hole mass, distance to the black hole),   
+ define constants (such as black hole mass, distance to the black hole),   
  and variables which will be saved in the GPU global memory during computation<br />
  
  
 **Odyssey_def_fun.h**
- defines functions needed for:
+ define functions needed for:
  <ul>
  <li>Ray-Tracing</li>
  such as initial conditions  `initial()` , differential equations for geodesics, adaptive step size Runge-Kutta method `rk5()`
