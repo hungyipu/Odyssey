@@ -21,3 +21,36 @@
     by Hung-Yi Pu, Kiyun Yun, Ziri Younsi, and Suk-Jin Yoon (submitted to ApJ) 
 	
 ***********************************************************************************/
+#include <cuda.h>
+#include <cuda_runtime.h>
+#include "Odyssey_def.h"
+
+namespace Task1
+{
+
+	class mission1
+	{
+	private:
+	
+
+	    double*  d_ResultsPixel;
+	    double*  d_VariablesIn;
+	    
+	    int      mGridDimx;
+	    int      mGridDimy;
+	    int      mBlockDimx;
+	    int      mBlockDimy;
+	    int	     mSize;
+
+
+	public:
+		void setDims(int GridDimX, int GridDimY, int BlockDimX, int BlockDimY);
+		void PRE(double* VariablesIn);
+		void GPUCompute(int GridIdxX, int GridIdxY);
+		void AFTER(double* ResultHit);
+
+	};
+
+}
+
+
