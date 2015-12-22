@@ -97,7 +97,7 @@ Odyssey is distributed freely under the GNU general public license. We ask that 
 
 <br />
 "Odyssey: A PUBLIC GPU-BASED CODE FOR GENERAL-RELATIVISTIC RADIATIVE TRANSFER IN KERR
-SPACE-TIME" by Hung-Yi Pu, Kiyun Yun, Ziri Younsi, and Suk-Jin Yoon (submitted to ApJ)
+SPACE-TIME" by Hung-Yi Pu, Kiyun Yun, Ziri Younsi, and Suk-Jin Yoon, 2015, submitted to ApJ
 <br />
 <img align="center" src="http://www.asiaa.sinica.edu.tw/~hypu/logo_asiaa.png" width="60">
 <img align="center" src="http://www.asiaa.sinica.edu.tw/~hypu/logo_yonsei.jpg" width="65">
