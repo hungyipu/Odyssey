@@ -71,8 +71,7 @@ __device__ static void geodesic(double* Variables, double* VariablesIn, double *
 
 
 
-__device__ static void rkstep(double* Variables, double* VariablesIn,
-								double *y, double *dydx, double h, double *yout, double *yerr)
+__device__ static void rkstep(double* Variables, double* VariablesIn,double *y, double *dydx, double h, double *yout, double *yerr)
 {
 	int i;
 	double ak[N];
@@ -147,8 +146,7 @@ __device__ static void rkstep(double* Variables, double* VariablesIn,
 }
 
 
-__device__ static double rk5(double* Variables, double* VariablesIn,
-			 					double *y, double *dydx, double htry, double escal, double *yscal, double *hdid)
+__device__ static double rk5(double* Variables, double* VariablesIn, double *y, double *dydx, double htry, double escal, double *yscal, double *hdid)
 {
 
 
@@ -205,8 +203,7 @@ __device__ static double rk5(double* Variables, double* VariablesIn,
 }
 
     
-__device__ static void initial(double* Variables, double* VariablesIn,
-						double *y0, double *ydot0)
+__device__ static void initial(double* Variables, double* VariablesIn, double *y0, double *ydot0)
 {
     double alpha = grid_x;
     double beta  = grid_y;
@@ -368,17 +365,17 @@ __device__ static  double K2(double Te)
 
 __device__ static double Jansky_Correction(double* VariablesIn,double ima_width)
 {
-	    double distance=C_sgrA_d*C_pc;
-		double theta=atan(ima_width*C_sgrA_mbh*C_rgeo/distance);
-		double pix_str=theta/(SIZE/2.)*theta/(SIZE/2.);  //Size of image in steradians
-		return pix_str/C_Jansky;
+	double distance=C_sgrA_d*C_pc;
+	double theta=atan(ima_width*C_sgrA_mbh*C_rgeo/distance);
+	double pix_str=theta/(SIZE/2.)*theta/(SIZE/2.);  //Size of image in steradians
+	return pix_str/C_Jansky;
 }
 
 __device__ static double Luminosity_Correction(double* VariablesIn,double ima_width)
 {
         double distance=C_sgrA_d*C_pc;
-		double theta=atan(ima_width*C_sgrA_mbh*C_rgeo/distance);
-		double pix_str=theta/(SIZE/2.)*theta/(SIZE/2.);  //Size of image in steradians
-		return pix_str*distance*distance*4.*PI;
+	double theta=atan(ima_width*C_sgrA_mbh*C_rgeo/distance);
+	double pix_str=theta/(SIZE/2.)*theta/(SIZE/2.);  //Size of image in steradians
+	return pix_str*distance*distance*4.*PI;
 }
 
