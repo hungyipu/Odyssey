@@ -58,6 +58,8 @@ In **main.cpp**, `task1()` is called by `main()`, then go through to<br />
 |<br />
 |---allocate memory on device for input and output `PRE()`<br />
 |<br />
+|---compute number of grids, to cover the whole image plane
+|<br />
 |---perform the [*for-loop* for GRRT](https://github.com/hungyipu/Odyssey/wiki/How-Odyssey-Works) `GPUcompute()`<br />
 |<br />
 |---copy memory form device to host and free CUDA memory `AFTER()`<br />
