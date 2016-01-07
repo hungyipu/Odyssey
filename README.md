@@ -96,13 +96,9 @@ Odyssey is fast, accurate, and flexible. Users can easiliy assign a different jo
 Odyssey is distributed freely under the GNU general public license. We ask that users of Odyssey cite the following paper in their subsequent scientific literature and publications which result from the use of any part of Odyssey:
 
 <br />
-"Odyssey: A PUBLIC GPU-BASED CODE FOR GENERAL-RELATIVISTIC RADIATIVE TRANSFER IN KERR
-SPACE-TIME" by Hung-Yi Pu, Kiyun Yun, Ziri Younsi, and Suk-Jin Yoon, 2016, accepted by Astrophysical Journal
+"Odyssey: A Public GPU-based Code for General-relativistic Radiative Transfer in Kerr Spacetime" by Hung-Yi Pu, Kiyun Yun, Ziri Younsi, and Suk-Jin Yoon, 2016, accepted by Astrophysical Journal
 <br />
-<img align="center" src="http://www.asiaa.sinica.edu.tw/~hypu/logo_asiaa.png" width="60">
-<img align="center" src="http://www.asiaa.sinica.edu.tw/~hypu/logo_yonsei.jpg" width="65">
-<img align="center" src="http://www.asiaa.sinica.edu.tw/~hypu/logo_GU.gif" width="120">
-<img align="center" src="http://www.asiaa.sinica.edu.tw/~hypu/logo_MSSL.png" width="120">
+
 
 # Odyssey_Edu
 An educational software, [Odyssey_Edu] (https://odysseyedu.wordpress.com/), is devloped together with Odyssey for visualizing the ray trajectories in the Kerr spacetime.
