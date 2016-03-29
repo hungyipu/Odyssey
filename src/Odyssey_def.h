@@ -1,5 +1,5 @@
 /***********************************************************************************
-    Copyright 2015  Hung-Yi Pu, Kiyun Yun, Ziri Yonsi, Sunk-Jin Yoon
+    Copyright 2015  Hung-Yi Pu, Kiyun Yun, Ziri Younsi, Sunk-Jin Yoon
                         Odyssey  version 1.0   (released  2015)
     This file is part of Odyssey source code. Odyssey is a public, GPU-based code 
     for General Relativistic Radiative Transfer (GRRT), following the 
@@ -18,7 +18,7 @@
     literature and publications which result from the use of any part of Odyssey:
     "Odyssey: A PUBLIC GPU-BASED CODE FOR GENERAL-RELATIVISTIC RADIATIVE TRANSFER 
     IN KERR SPACE-TIME" 
-    by Hung-Yi Pu, Kiyun Yun, Ziri Younsi, and Suk-Jin Yoon (submitted to ApJ) 
+    by Hung-Yi Pu, Kiyun Yun, Ziri Younsi, and Suk-Jin Yoon (2016 ApJ, 820, 105 ) 
 	
 ***********************************************************************************/
 #include <cuda.h>
