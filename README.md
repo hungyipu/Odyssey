@@ -1,4 +1,14 @@
 # Odyssey: a GPU-based GRRT code
+
+## Table of contents
+- [About](#about)
+- [Summary of Source Codes](#Summary of Source Codes)
+- [Code Structure](#Code Structure)
+- [Code Structure: more details](#Code Structure: more details)
+- [Credit](#Credit)
+- [Odyssey_Edu: an free educational software](#Odyssey_Edu: an free educational software)
+
+## About
 Odyssey is a public, GPU-based General Relativistic Radiative Transfer (GRRT) code for computing images and/or spectra in Kerr metric, which described the spacetime aroung a rotating black hole. Implemented in CUDA C/C++, Odyssey is based on the ray-tracing algorithm presented in [Fuerst & Wu (2004)](http://adsabs.harvard.edu/abs/2004A%26A...424..733F), and radiative transfer formulation described in [Younsi, Wu, & Fuerst. (2012)](http://adsabs.harvard.edu/abs/2012A%26A...545A..13Y).
 
 For flexibility, namespace structure in C++  is used for different tasks. Two default tasks are presented in the source code. Including :
