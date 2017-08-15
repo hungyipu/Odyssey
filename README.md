@@ -1,8 +1,7 @@
 # Odyssey: a GPU-based GRRT code
 
-## Table of contents
 - [About](#about)
-- [Summary of Source Codes](#Summary of Source Codes)
+- [Summary of Source Codes](#Summary)
 - [Code Structure](#Code Structure)
 - [Code Structure: more details](#Code Structure: more details)
 - [Credit](#Credit)
