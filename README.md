@@ -3,7 +3,7 @@
 - [About](#about)
 - [Summary of Source Codes](#summary-of-source-codes)
 - [Code Structure](#code-structure)
-- [Code Structure: more details](#code-structure:-more-details)
+- [Code Structure: more details](#code-structure-more-details)
 - [Credit](#credit)
 - [Odyssey_Edu: an free educational software](#odyssey_Edu)
 
