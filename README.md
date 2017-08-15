@@ -86,7 +86,7 @@ job-details:
 <br />
 Odyssey is fast, accurate, and flexible. Users can easiliy assign a different job by simply modifying the job-details. 
 <br />
-<br />Alternatively, users can also add a new Task (e.g., task 3) by following suggested recipe:
+Alternatively, users can also add a new Task (e.g., task 3) by following suggested recipe:
  1. add file: task3.h</li>
  2. add file: task3.cpp</li>
  3. add subroutine: task3() in **main.cpp**
@@ -96,7 +96,7 @@ Odyssey is fast, accurate, and flexible. Users can easiliy assign a different jo
 Odyssey is distributed freely under the GNU general public license. We ask that users of Odyssey cite the following paper in their subsequent scientific literature and publications which result from the use of any part of Odyssey:
 
 
-[Odyssey: A Public GPU-based Code for General-relativistic Radiative Transfer in Kerr Spacetime](http://adsabs.harvard.edu/abs/2016ApJ...820..105P)<br /> 
+["Odyssey: A Public GPU-based Code for General-relativistic Radiative Transfer in Kerr Spacetime"](http://adsabs.harvard.edu/abs/2016ApJ...820..105P)<br /> 
 by Hung-Yi Pu, Kiyun Yun, Ziri Younsi and Suk-Jin Yoon (2016 Astrophysical Journal 820, 105)
 
 
