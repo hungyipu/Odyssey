@@ -1,4 +1,4 @@
-# Odyssey
+# Odyssey: a GPU-based GRRT code
 Odyssey is a public, GPU-based General Relativistic Radiative Transfer (GRRT) code for computing images and/or spectra in Kerr metric, which described the spacetime aroung a rotating black hole. Implemented in CUDA C/C++, Odyssey is based on the ray-tracing algorithm presented in [Fuerst & Wu (2004)](http://adsabs.harvard.edu/abs/2004A%26A...424..733F), and radiative transfer formulation described in [Younsi, Wu, & Fuerst. (2012)](http://adsabs.harvard.edu/abs/2012A%26A...545A..13Y).
 
 For flexibility, namespace structure in C++  is used for different tasks. Two default tasks are presented in the source code. Including :
@@ -102,7 +102,7 @@ by Hung-Yi Pu, Kiyun Yun, Ziri Younsi and Suk-Jin Yoon (2016 Astrophysical Journ
 
 
 
-# Odyssey_Edu
+# Odyssey_Edu: an free educational software
 An educational software, [Odyssey_Edu](https://odysseyedu.wordpress.com/), is devloped together with Odyssey for visualizing the ray trajectories in the Kerr spacetime.
 
 
