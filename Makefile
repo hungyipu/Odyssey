@@ -8,7 +8,7 @@ CFLAGS    = -c -g -Wall
 all: cpp cu exe
 
 cpp:
-	@${CPP} ${CFLAGS} -lm -I. -I${CUDA_PATH}/include ${SRC_PATH}/main.cpp -o main.cpp.o
+	@${CPP} ${CFLAGS} -lm -I. -I${CUDA_PATH}/include ${SRC_PATH}/main.cpp  -o main.cpp.o
 	@${CPP} ${CFLAGS} -lm -I. -I${CUDA_PATH}/include ${SRC_PATH}/task1.cpp -o task1.cpp.o
 	@${CPP} ${CFLAGS} -lm -I. -I${CUDA_PATH}/include ${SRC_PATH}/task2.cpp -o task2.cpp.o  
 cu:
