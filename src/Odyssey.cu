@@ -173,33 +173,52 @@ __device__ double task2fun_GetZ(double* Variables, double* VariablesIn, double *
     costheta=cos(theta);
     double cos2 = costheta*costheta;
     double sin2 = sintheta*sintheta;
-   
-   
-   
+     
     double sigma = r2+a2*cos2;
     double delta = r2-twor+a2;
     double bigA=(r * r + A * A) * (r * r + A * A) - A * A * delta * sin2;
+    double ssig=(r2+a2)*(r2+a2)-a2*delta*sin2; 
+	
+    //======define (covariant) metric component		
+    double gtt=-(1.-2.*r/sigma);
+    double gtph=-2.*a*r*sin2/sigma;
+    double grr=sigma/delta;
+    double gthth=sigma;
+    double gphph=ssig*sin2/sigma;		
    
-    if( r<Rmstable)  
-     {
-     
-       double lambda=(Rmstable*Rmstable-2.*A*sqrt(Rmstable)+a2)/(sqrt(Rmstable*Rmstable*Rmstable)-2.*sqrt(Rmstable)+A);
+
+    //==========Keplerian flow: outside ISCO
+    double ut_k  =(r*r+a*sqrt(r))/(r*sqrt(r*r-3.*r+2.*a*sqrt(r)));
+    double ur_k  =0.;
+    double uphi_k  =1./(sqrt(r)*sqrt(r*r-3.*r+2.*a*sqrt(r)));
+
+    //==========Keplerian flow: inside ISCO    
+    if( r<Rmstable)
+      {
+            
+       double delta = r*r-2.*r+a2;
+       double lambda=(Rmstable*Rmstable-2.*a*sqrt(Rmstable)+a2)/(sqrt(Rmstable*Rmstable*Rmstable)-2.*sqrt(Rmstable)+a);
        double gamma=sqrt(1-2./3./Rmstable);
-       double h=(2.*r-A*lambda)/delta;
-           
-       
-        
-       ur=-sqrt(2./3./Rmstable)*pow((Rmstable/r-1.),1.5);
-       uphi=gamma/r/r*(lambda+A*h);
-       ut=gamma*(1.+2/r*(1.+h));
-     
-       E_local=-ut+L*uphi+pr*ur;
-       return E_local/E_inf; 
-    }
-   
-    E_local=-(r*r+A*sqrt(r))/(r*sqrt(r*r-3.*r+2.*A*sqrt(r)))+L/sqrt(r)/sqrt(r*r-3.*r+2.*A*sqrt(r)); 
-       
-	return E_local/E_inf; 
+       double h=(2.*r-a*lambda)/delta;
+
+       ut_k=gamma*(1.+2/r*(1.+h));
+       ur_k=-sqrt(2./3./Rmstable)*sqrt(pow((Rmstable/r-1.),3.));
+       uphi_k=gamma/r/r*(lambda+a*h);
+       }	
+	
+    //normalize the four-velocity
+    double ut    = ut_k;
+    double uphi  = uphi_k;
+    double ur    = ur_k;	
+    double omega = uphi/ut;
+    double k0    = -(gtt + omega*omega*gphph + 2.*omega*gtph);
+    ut = sqrt(((1. + grr*ur*ur) / k0));
+    uphi = omega*ut;	
+	
+    // compute redshift
+    E_local=-ut+L*uphi+pr*ur;
+    return E_local/E_inf; 
+
 }
 
 
