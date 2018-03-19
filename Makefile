@@ -23,7 +23,7 @@ exe:
 	$(info =================================)
 	
 plot:
-	@gnuplot < plot.gp	
+	@gnuplot < plot_task2.gp	
 
 clean:
 	@rm -f *.o
