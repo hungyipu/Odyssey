@@ -21,7 +21,7 @@
     by Hung-Yi Pu, Kiyun Yun, Ziri Younsi, and Suk-Jin Yoon (2016 ApJ 820, 105) 
 	
 ***********************************************************************************/
-#pragma once
+//#pragma once
 
 #include <cuda.h>
 #include <fstream>
@@ -179,9 +179,10 @@ namespace OdysseyTasks
 	}
 }
 
-void main()
+int main()
 {
 	cudaSetDevice(0);	
 	OdysseyTasks::task1();
 	//OdysseyTasks::task2();
+	return 0;
 }
