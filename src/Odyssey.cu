@@ -26,7 +26,7 @@
 #include <cuda_runtime.h>
 #include <device_launch_parameters.h>
 #include <iostream>
-#include <string.H>
+#include <string.h>
 #include <math.h>
 #include <stdio.h>
 #include "Odyssey_def.h"
