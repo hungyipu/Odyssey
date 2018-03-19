@@ -1,19 +1,19 @@
 CUDA_PATH = /usr/local/cuda
 SRC_PATH  = ./src
 CUDA      = nvcc
-CUDAFLAGS = -arch=compute_20 
+CUDAFLAGS = -arch=compute_20 -c
 CPP       = g++
-CFLAGS    = -c -g -Wall
+CFLAGS    = -c -g -lm -Wall
 
 all: cpp cu exe
 
 cpp:
-	@${CPP} ${CFLAGS} -lm -I. -I${CUDA_PATH}/include ${SRC_PATH}/main.cpp  -o main.cpp.o
-	@${CPP} ${CFLAGS} -lm -I. -I${CUDA_PATH}/include ${SRC_PATH}/task1.cpp -o task1.cpp.o
-	@${CPP} ${CFLAGS} -lm -I. -I${CUDA_PATH}/include ${SRC_PATH}/task2.cpp -o task2.cpp.o  
+	@${CPP} ${CFLAGS} -I. -I${CUDA_PATH}/include ${SRC_PATH}/main.cpp  -o main.cpp.o
+	@${CPP} ${CFLAGS} -I. -I${CUDA_PATH}/include ${SRC_PATH}/task1.cpp -o task1.cpp.o
+	@${CPP} ${CFLAGS} -I. -I${CUDA_PATH}/include ${SRC_PATH}/task2.cpp -o task2.cpp.o  
 cu:
 
-	@${CUDA} ${CUDAFLAGS} -c -I. -I${CUDA_PATH}/include ${SRC_PATH}/Odyssey.cu -o Odyssey.cu.o
+	@${CUDA} ${CUDAFLAGS} -I. -I${CUDA_PATH}/include ${SRC_PATH}/Odyssey.cu -o Odyssey.cu.o
 
 exe:
 
