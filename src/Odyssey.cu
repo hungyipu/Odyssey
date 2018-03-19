@@ -188,9 +188,9 @@ __device__ double task2fun_GetZ(double* Variables, double* VariablesIn, double *
    
 
     //==========Keplerian flow: outside ISCO
-    double ut_k  =(r*r+a*sqrt(r))/(r*sqrt(r*r-3.*r+2.*a*sqrt(r)));
+    double ut_k  =(r*r+A*sqrt(r))/(r*sqrt(r*r-3.*r+2.*A*sqrt(r)));
     double ur_k  =0.;
-    double uphi_k  =1./(sqrt(r)*sqrt(r*r-3.*r+2.*a*sqrt(r)));
+    double uphi_k  =1./(sqrt(r)*sqrt(r*r-3.*r+2.*A*sqrt(r)));
 
     //==========Keplerian flow: inside ISCO    
     if( r<Rmstable)
