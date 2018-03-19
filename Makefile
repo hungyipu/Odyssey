@@ -21,6 +21,9 @@ exe:
 	$(info =================================)
 	$(info exe file is ready to run: ./exec)
 	$(info =================================)
+	
+plot:
+	@gnuplot < plot.gp	
 
 clean:
 	@rm -f *.o
