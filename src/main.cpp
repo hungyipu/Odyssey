@@ -182,7 +182,7 @@ namespace OdysseyTasks
 int main()
 {
 	cudaSetDevice(0);	
-	OdysseyTasks::task1();
-	//OdysseyTasks::task2();
+	//OdysseyTasks::task1();
+	OdysseyTasks::task2();
 	return 0;
 }
