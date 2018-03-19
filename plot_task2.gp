@@ -1,4 +1,4 @@
-# plotting result of taks 2 by using gnuplot
+# example: plotting the result of task 2 by using gnuplot
 set term  png
 set output "task2_result.png"
 set view map
