@@ -199,7 +199,7 @@ __device__ double task2fun_GetZ(double* Variables, double* VariablesIn, double *
        double delta = r*r-2.*r+a2;
        double lambda=(Rmstable*Rmstable-2.*A*sqrt(Rmstable)+a2)/(sqrt(Rmstable*Rmstable*Rmstable)-2.*sqrt(Rmstable)+A);
        double gamma=sqrt(1-2./3./Rmstable);
-       double h=(2.*r-a*lambda)/delta;
+       double h=(2.*r-A*lambda)/delta;
 
        ut_k=gamma*(1.+2/r*(1.+h));
        ur_k=-sqrt(2./3./Rmstable)*sqrt(pow((Rmstable/r-1.),3.));
