@@ -181,7 +181,7 @@ __device__ double task2fun_GetZ(double* Variables, double* VariablesIn, double *
 	
     //======define (covariant) metric component		
     double gtt=-(1.-2.*r/sigma);
-    double gtph=-2.*a*r*sin2/sigma;
+    double gtph=-2.*A*r*sin2/sigma;
     double grr=sigma/delta;
     double gthth=sigma;
     double gphph=ssig*sin2/sigma;		
@@ -197,19 +197,19 @@ __device__ double task2fun_GetZ(double* Variables, double* VariablesIn, double *
       {
             
        double delta = r*r-2.*r+a2;
-       double lambda=(Rmstable*Rmstable-2.*a*sqrt(Rmstable)+a2)/(sqrt(Rmstable*Rmstable*Rmstable)-2.*sqrt(Rmstable)+a);
+       double lambda=(Rmstable*Rmstable-2.*A*sqrt(Rmstable)+a2)/(sqrt(Rmstable*Rmstable*Rmstable)-2.*sqrt(Rmstable)+A);
        double gamma=sqrt(1-2./3./Rmstable);
        double h=(2.*r-a*lambda)/delta;
 
        ut_k=gamma*(1.+2/r*(1.+h));
        ur_k=-sqrt(2./3./Rmstable)*sqrt(pow((Rmstable/r-1.),3.));
-       uphi_k=gamma/r/r*(lambda+a*h);
+       uphi_k=gamma/r/r*(lambda+A*h);
        }	
 	
     //normalize the four-velocity
-    double ut    = ut_k;
-    double uphi  = uphi_k;
-    double ur    = ur_k;	
+    ut    = ut_k;
+    uphi  = uphi_k;
+    ur    = ur_k;	
     double omega = uphi/ut;
     double k0    = -(gtt + omega*omega*gphph + 2.*omega*gtph);
     ut = sqrt(((1. + grr*ur*ur) / k0));
