@@ -111,7 +111,7 @@ by Hung-Yi Pu, Kiyun Yun, Ziri Younsi and Suk-Jin Yoon (2016 Astrophysical Journ
 
 
 
-# Odyssey_Edu: an free educational software
+# Odyssey_Edu: a free educational software
 An educational software, [Odyssey_Edu](https://odysseyedu.wordpress.com/), is devloped together with Odyssey for visualizing the ray trajectories in the Kerr spacetime.
 
 
