@@ -17,7 +17,7 @@ cu:
 
 exe:
 
-	@g++ -o exec *.o -L${CUDA_PATH}/lib64 -lcudart -lcuda
+	@${CPP} -o exec *.o -L${CUDA_PATH}/lib64 -lcudart -lcuda
 	$(info =================================)
 	$(info exe file is ready to run: ./exec)
 	$(info =================================)
