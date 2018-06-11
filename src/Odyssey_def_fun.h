@@ -367,7 +367,7 @@ __device__ static double Jansky_Correction(double* VariablesIn,double ima_width)
 {
 	double distance=C_sgrA_d*C_pc;
 	double theta=atan(ima_width*C_sgrA_mbh*C_rgeo/distance);
-	double pix_str=theta/(SIZE/2.)*theta/(SIZE/2.);  //Size of image in steradians
+	double pix_str=theta/(SIZE/2.)*theta/(SIZE/2.);  //radian^2 (steradians) per pixel
 	return pix_str/C_Jansky;
 }
 
@@ -375,7 +375,7 @@ __device__ static double Luminosity_Correction(double* VariablesIn,double ima_wi
 {
         double distance=C_sgrA_d*C_pc;
 	double theta=atan(ima_width*C_sgrA_mbh*C_rgeo/distance);
-	double pix_str=theta/(SIZE/2.)*theta/(SIZE/2.);  //Size of image in steradians
-	return pix_str*distance*distance*4.*PI;
+	double pix_str=theta/(SIZE/2.)*theta/(SIZE/2.);  //radian^2 (steradians) per pixel
+	return pix_str*distance*distance*4.*PI*freq_obs;
 }
 
