@@ -1,7 +1,10 @@
+#before run the Makefile: module load cuda/8.0.44
 CUDA_PATH = /usr/local/cuda
 SRC_PATH  = ./src
 CUDA      = nvcc
-CUDAFLAGS = -arch=compute_20 -c
+#CUDAFLAGS = -arch=compute_20 -c
+CUDAFLAGS = -c 
+#-Wno-deprecated-gpu-targets
 CPP       = g++
 CFLAGS    = -c -g -lm -Wall
 
@@ -17,7 +20,7 @@ cu:
 
 exe:
 
-	@${CPP} -o exec *.o -L${CUDA_PATH}/lib64 -lcudart -lcuda
+	@${CPP} -o exec *.o -L${CUDA_PATH}/lib64 -lcudart
 	$(info =================================)
 	$(info exe file is ready to run: ./exec)
 	$(info =================================)
