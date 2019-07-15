@@ -14,7 +14,7 @@ For flexibility, namespace structure in C++  is used for different tasks. Two de
 
  1. The redshift of a Keplerian disk</li>
  2. The image of Keplerian rotating shell at 340GHz</li>
- (See the example results[here](https://github.com/hungyipu/Odyssey/blob/master/task1.png))
+ (See the example results [here](https://github.com/hungyipu/Odyssey/wiki/Default-Tasks-of-Odyssey-Source-Code))
   
  
 ## Summary of Source Codes
