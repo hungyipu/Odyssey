@@ -287,7 +287,7 @@ __device__ static float ISCO(double* VariablesIn)
 #define Te_grids  50.
 
 static __device__ __constant__ double K2_tab[] = {
--10.747001,
+-10.747001, //Te=0.1
 -9.362569,
 -8.141373,
 -7.061568,
@@ -336,7 +336,7 @@ static __device__ __constant__ double K2_tab[] = {
 +8.798171,
 +9.074500,
 +9.350824,
-+9.627144
++9.627144  //Te=87.09
 };
 
 
@@ -351,12 +351,17 @@ __device__ static double K2_find(double Te)
 __device__ static  double K2(double Te)
 {
   double tab_K2;
-
-	if (Te>Te_max){ 
+        //avoid the boundary effect when T~T_max
+	if (Te>85.){ 
 		tab_K2=2.*Te*Te;
-		return exp(tab_K2);
+		return tab_K2;
 	}
-	  
+	 
+	if (Te<Te_min){ 
+                //set a dummy value
+		return exp(-11.);
+	}
+	
     tab_K2= K2_find(Te);
         return exp(tab_K2);
 }
