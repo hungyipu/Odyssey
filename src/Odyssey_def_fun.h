@@ -207,11 +207,14 @@ __device__ static void initial(double* Variables, double* VariablesIn, double *y
 {
     double alpha = grid_x;
     double beta  = grid_y;
+	
+    //see Equation [18-19], with phi_obs=0, x= alpha, y=beta, z=0
     double x     = sqrt(r0*r0+a2)*sin(theta0)-beta*cos(theta0);
     double y     = alpha;
     double z     = r0*cos(theta0)+beta*sin(theta0);
     double u     = x*x+y*y+z*z-a2;
     
+    //see Equation[20-22]
     y0[0] = sqrt((u+sqrt(u*u+(2.*A*z)*(2.*A*z)))/2.);   
     y0[1] = acos(z/y0[0]);                              
     y0[2] = atan2(y,x);                                
