@@ -273,7 +273,7 @@ __device__ static void initial(double* Variables, double* VariablesIn, double *y
 
 __device__ static float ISCO(double* VariablesIn)
 {
-	double z1		   = 1 + pow(1 - A * A, 1 / 3.0) * pow(1 + A, 1 / 3.0) + pow(1 - A, 1 / 3.0);
+	double z1		   = 1 + pow(1 - A * A, 1 / 3.0) * (pow(1 + A, 1 / 3.0) + pow(1 - A, 1 / 3.0));
 	double z2		   = sqrt(3 * A * A + z1 * z1);
 	return 3. + z2 - sqrt((3 - z1) * (3 + z1 + 2 * z2));
 }
